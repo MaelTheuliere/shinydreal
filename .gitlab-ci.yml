@@ -14,4 +14,4 @@ test:
   script:
   - R -e 'remotes::install_cran("rsconnect", upgrade="always", lib = Sys.getenv("R_LIBS_USER"))'
   - R -e 'print(Sys.getenv("POUET"))'
-  - R -e 'library(rsconnect); addConnectServer("http://vps597811.ovh.net:3939");deployApp()'
+  - R -e 'library(rsconnect); deployApp(server = "http://vps597811.ovh.net:3939")'
