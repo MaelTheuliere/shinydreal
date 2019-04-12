@@ -1,6 +1,5 @@
 image: thinkr/runnerci
 
-
 variables:
   R_LIBS_USER: "$CI_PROJECT_DIR/ci/lib"
   CHECK_DIR: "$CI_PROJECT_DIR/ci/logs"
@@ -12,5 +11,9 @@ cache:
   
 test:
   script:
-  - R -e 'remotes::install_cran("rsconnect", upgrade="always", lib = Sys.getenv("R_LIBS_USER"))'
-  - R -e 'library(rsconnect); setAccountInfo("colin", Sys.getenv("CONNECTTOKEN"));deployApp(server = "http://vps597811.ovh.net:3939")'
+  - mkdir -p $R_LIBS_USER $BUILD_LOGS_DIR
+  - R -e 'install.packages(c("remotes"), lib = Sys.getenv("R_LIBS_USER"))'
+  - R -e 'remotes::install_cran(c("roxygen2", "devtools", "processx"), upgrade="always", lib = Sys.getenv("R_LIBS_USER"))'
+  - R -e 'remotes::install_deps(dependencies=NA, upgrade="always", lib = Sys.getenv("R_LIBS_USER"))'
+  - R -e 'devtools::check(check_dir = Sys.getenv("CHECK_DIR"))'
+  - R -e 'if (length(devtools::check_failures(path = Sys.getenv("BUILD_LOGS_DIR"), warning = FALSE, note = FALSE)) > 0) stop()'
