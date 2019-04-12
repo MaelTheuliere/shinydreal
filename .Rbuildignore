@@ -1,0 +1,5 @@
+^data-raw$
+^deploy\.R$
+^\./app\.R$
+^.*\.Rproj$
+^\.Rproj\.user$

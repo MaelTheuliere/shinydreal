@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'dreal';
+  src: url('../font/dreal.eot?68399540');
+  src: url('../font/dreal.eot?68399540#iefix') format('embedded-opentype'),
+       url('../font/dreal.woff2?68399540') format('woff2'),
+       url('../font/dreal.woff?68399540') format('woff'),
+       url('../font/dreal.ttf?68399540') format('truetype'),
+       url('../font/dreal.svg?68399540#dreal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'dreal';
+    src: url('../font/dreal.svg?68399540#dreal') format('svg');
+  }
+}
+*/
+ 
+ .alert.alert-danger.alert-danger::before, .alert.alert-success.alert-success::before,
+ [class^="drl-"]:before, [class*=" drl-"]:before {
+  font-family: "dreal";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.drl-abeille:before { content: '\e800'; } /* '' */
+.drl-arbre:before { content: '\e801'; } /* '' */
+.drl-ble:before { content: '\e802'; } /* '' */
+.drl-buche-de-bois:before { content: '\e803'; } /* '' */
+.drl-cadastre:before { content: '\e804'; } /* '' */
+.drl-camion:before { content: '\e805'; } /* '' */
+.drl-campagne:before { content: '\e806'; } /* '' */
+.drl-economie-infini:before { content: '\e807'; } /* '' */
+.drl-eolienne:before { content: '\e808'; } /* '' */
+.drl-eprouvette:before { content: '\e809'; } /* '' */
+.drl-erlenmeyer:before { content: '\e80a'; } /* '' */
+.drl-explosion:before { content: '\e80b'; } /* '' */
+.drl-flamme:before { content: '\e80c'; } /* '' */
+.drl-grue:before { content: '\e80d'; } /* '' */
+.drl-innondation:before { content: '\e80e'; } /* '' */
+.drl-littoral:before { content: '\e80f'; } /* '' */
+.drl-maison:before { content: '\e810'; } /* '' */
+.drl-oiseau:before { content: '\e811'; } /* '' */
+.drl-panneau-solaire:before { content: '\e812'; } /* '' */
+.drl-planete:before { content: '\e813'; } /* '' */
+.drl-poisson:before { content: '\e814'; } /* '' */
+.drl-poubelle:before { content: '\e815'; } /* '' */
+.drl-route:before { content: '\e816'; } /* '' */
+.drl-submersion-marine:before { content: '\e817'; } /* '' */
+.drl-thermometre:before { content: '\e818'; } /* '' */
+.drl-tracteur:before { content: '\e819'; } /* '' */
+.drl-tuyauterie:before { content: '\e81a'; } /* '' */
+.drl-usine:before { content: '\e81b'; } /* '' */
+.drl-velo:before { content: '\e81c'; } /* '' */
+.drl-ville:before { content: '\e81d'; } /* '' */
+.drl-voie-ferree:before { content: '\e81e'; } /* '' */
+.drl-vache:before { content: '\e81f'; } /* '' */
+.drl-arrow:before { content: '\e820'; } /* '' */
+.drl-arrow.right:before { transform:rotate(180deg); } /* '' */
+.alert.alert-success.alert-success::before,
+.drl-check:before { content: '\e821'; } /* '' */
+.alert.alert-danger.alert-danger:before,
+.drl-danger:before { content: '\e822'; } /* '' */

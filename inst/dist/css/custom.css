@@ -1,0 +1,8 @@
+h1 h2 h3 h4 h5 h6 span::before {
+  content: "\A";
+  white-space: pre;
+}
+
+.slidecontainercontainer{
+  padding:1em;
+}
