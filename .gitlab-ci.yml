@@ -13,5 +13,5 @@ cache:
 test:
   script:
   - R -e 'remotes::install_cran("rsconnect", upgrade="always", lib = Sys.getenv("R_LIBS_USER"))'
-  - R -e 'print(Sys.getenv("R_LIBS_USER"))'
-  - R -e 'library(rsconnect); setAccountInfo();deployApp()'
+  - R -e 'print(Sys.getenv("POUET"))'
+  - R -e 'library(rsconnect); addConnectServer("http://vps597811.ovh.net:3939");deployApp()'
