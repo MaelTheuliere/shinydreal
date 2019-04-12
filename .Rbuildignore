@@ -1,3 +1,5 @@
+^\./deploy_history\.txt$
+^\./deploy\.R$
 ^data-raw$
 ^deploy\.R$
 ^\./app\.R$

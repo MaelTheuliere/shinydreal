@@ -1,1 +1,0 @@
-system('notify -t "Hello" -m "My Message"')
