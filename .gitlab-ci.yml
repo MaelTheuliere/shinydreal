@@ -1,0 +1,16 @@
+image: thinkr/runnerci
+
+
+variables:
+  R_LIBS_USER: "$CI_PROJECT_DIR/ci/lib"
+  CHECK_DIR: "$CI_PROJECT_DIR/ci/logs"
+  BUILD_LOGS_DIR: "$CI_PROJECT_DIR/ci/logs/$CI_PROJECT_NAME.Rcheck"
+
+cache:
+  paths:
+    - ci/
+  
+test:
+  script:
+  - R -e 'remotes::install_cran("rsconnect", upgrade="always", lib = Sys.getenv("R_LIBS_USER"))'
+  - R -e 'rsconnect::deployApp()'
