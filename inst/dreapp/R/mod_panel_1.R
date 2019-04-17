@@ -17,10 +17,15 @@ mod_panel_1_ui <- function(id){
   ns <- NS(id)
   tagList(
     dr_row(
-      dr_col_12(
+      dr_col_6(
         h2("Un super tableau"),
         dr_tableOutput(ns("dt"), "striped"), 
         dr_blockquote("Une tableau qu'il est beau !", footer = "Colin")
+      ),
+      dr_col_6(
+        h2("Un super tableau"),
+        dr_tableOutput(ns("dt2"), "bordered"), 
+        dr_blockquote("Encore mieux !", footer = "Colin")
       )
 
     )
@@ -37,7 +42,10 @@ mod_panel_1_server <- function(input, output, session){
   ns <- session$ns
   
   output$dt <- renderTable({
-    shinipsum::random_table(10, 10)
+    shinipsum::random_table(10, 8)
+  })
+  output$dt2 <- renderTable({
+    shinipsum::random_table(10, 8)
   })
 }
     

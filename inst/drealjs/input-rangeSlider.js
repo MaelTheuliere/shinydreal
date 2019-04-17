@@ -17,7 +17,6 @@ $.extend(sliderangerBinding, {
     return $(scope).find(".slideranger");
   },
   getValue: function(el) {  
-    debugger;
     return $(el).val();
   },
   setValue: function(el, value) {

@@ -29,17 +29,26 @@ input_binding <- function() {
       "input-fleche.js",
       "input-nav.js",
       "input-progress.js",
-      "input-rangeSlider.js"
+      "input-rangeSlider.js", 
+      "input-select.js",
+      "input-onoff.js", 
+      "input-radioButton.js",
+      "panel.js"
     )
   )
 }
 
 script_footer <- function(){
+  addResourcePath(
+    "js", 
+    system.file("dist/js", package = "meatballs")
+  )
   tagList(
-    tags$script("window.Tether = {};"),
-   #tags$script(src="vendors/bootstrap/js/bootstrap.min.js"),
-    tags$script(type="application/javascript", src="js/app.min.js"),
-    tags$script(src="js/dreal.js")
+    HTML(
+      '<script>window.Tether = {};</script>
+      <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script type="application/javascript" src="js/app.min.js"></script>'
+    )
   )
 
 }
