@@ -16,3 +16,50 @@ h1 h2 h3 h4 h5 h6 {
     left: calc(50% - 3px);
     border-radius: 50%;
 }
+
+.custom-control-description {
+    pointer-events: none;
+}
+
+.input-daterange .input-sm {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: calc(50% - 25px);
+    background: #00bebe;
+    color: #fff;
+    border: none;
+    outline: 0;
+    text-align: center;
+    padding-left: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 4px;
+}
+
+span.input-group-addon {
+    width: 40px;
+    background: #b4b4b4;
+    text-align: center;
+    color: #fff;
+}
+
+.form-control+.input-group-addon:not(:first-child){
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
+.datepicker-days {
+    width: 100%;
+    border: none;
+    background: #b4b4b4;
+    color: #00465a;
+    border-radius: 0;
+}
+
+.datepicker-dropdown {
+    top: 0;
+    left: 0;
+    padding: 4px;
+}

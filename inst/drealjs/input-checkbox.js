@@ -1,12 +1,10 @@
-$(document).on("click", ".custom-control-parent-radio", function(evt) {
+$(document).on("click", ".select-items", function(evt) {
   var el = $(evt.target);
   console.log($(el));
   el.children().on("click", function(e) {
     e.stopPropagation();
   });
-  var big_nodes = $(el).parent().parent();
-  $(big_nodes).find("label").removeClass("checked");
-  el.toggleClass("checked");
+  el.toggleClass("checked")
   el.trigger("change");
 });
 
@@ -15,7 +13,7 @@ var checkboxBinding = new Shiny.InputBinding();
 
 $.extend(checkboxBinding, {
   find: function(scope) {
-    return $(scope).find(".custom-control-parent-radio");
+    return $(scope).find(".select-items");
   },
   getValue: function(el) {  
     var plop = [];

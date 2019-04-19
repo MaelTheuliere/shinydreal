@@ -33,6 +33,8 @@ input_binding <- function() {
       "input-select.js",
       "input-onoff.js", 
       "input-radioButton.js",
+      "input-checkbox.js",
+      "input-increment.js",
       "panel.js"
     )
   )

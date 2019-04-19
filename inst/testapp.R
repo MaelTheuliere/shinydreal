@@ -2,63 +2,63 @@ pkgload::load_all()
 library(shiny)
 rm(list = ls())
 
-dr_radioButtons <- function(
-  inputId, 
-  label, 
-  choices = NULL, 
-  selected = NULL
-){
+incrementButton <- function(inputId, label, choices) {
+  
   tags$div(
-    id = inputId, 
-    tags$label(
-      class="control-label", 
-      `for` = inputId
-    ), 
-    lapply(
-      choices, 
-      function(x){
-        tagList(
-          tags$div(
-            class="mb-2", 
-            tags$label(
-              class = "custom-control custom-radio", 
-              tags$input(
-                name = "radio", 
-                class = "custom-control-input", 
-                if (!is.null(selected) && x == selected){
-                  "checked"
-                } else {
-                  ""
-                }
-              ), 
-              tags$span(class = "custom-control-indicator"), 
-              tags$span(class="custom-control-description", x)
-            )
-          )
+    class="btn-group bg-primary",
+    
+    tags$button(
+      class = "increment btn btn-primary dropdown-toggle",
+      type = "button",
+      `data-toggle` = "dropdown",
+      `aria-haspopup` = "true", 
+      `aria-expanded` = "false", 
+      label
+      ), 
+    tags$div(
+      class="dropdown-menu", 
+      lapply(choices, function(x){
+        tags$button(
+          id = sprintf("%s_%s", inputId, x),
+          class = "dropdown-item", 
+          `data-value` = 0,
+          x
         )
       })
+    )
   )
+    
 }
-
 ui <- function(request){
   dr_fluidPage(
     h2("plop"),
     tagList(
-      dr_selectInput(
-        "plop", "plop", letters
-      )
-    )
+      incrementButton("plop", "plop", letters[1:3])
+    #   HTML('<div >
+    #             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
+    #             <div class="dropdown-menu">
+    #                 <a class="dropdown-item" href="#">Action</a>
+    #                 <a class="dropdown-item" href="#">Another action</a>
+    #                 <a class="dropdown-item" href="#">Something else here</a>
+    #                 <div class="dropdown-divider"></div>
+    #                 <a class="dropdown-item" href="#">Separated link</a>
+    #             </div>
+    #         </div>')
+  )
   )
 }
 
 server <- function(input, output, session){
-  observeEvent(input$show, {
-    #browser()
     
     observe({
-      print(input$plop)
+      print(input$plop_a)
     })
-  })
+    observe({
+      print(input$plop_b)
+    })
+    observe({
+      print(input$plop_c)
+    })
 }
 
 shinyApp(ui, server)
