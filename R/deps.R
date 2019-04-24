@@ -39,6 +39,13 @@ input_binding <- function() {
     )
   )
 }
+icons_binding <- function() {
+  htmltools::htmlDependency(
+    "line-awesome","0.1.0",
+    src = system.file("line-awesome", package = "meatballs"),
+    all_files = TRUE
+  )
+}
 
 script_footer <- function(){
   addResourcePath(
