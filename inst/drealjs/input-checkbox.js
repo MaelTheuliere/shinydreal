@@ -1,4 +1,4 @@
-$(document).on("click", ".select-items", function(evt) {
+$(document).on("click", ".custom-checkbox", function(evt) {
   var el = $(evt.target);
   console.log($(el));
   el.children().on("click", function(e) {
@@ -13,7 +13,7 @@ var checkboxBinding = new Shiny.InputBinding();
 
 $.extend(checkboxBinding, {
   find: function(scope) {
-    return $(scope).find(".select-items");
+    return $(scope).find(".custom-control-parent-checkbox");
   },
   getValue: function(el) {  
     var plop = [];
@@ -26,6 +26,7 @@ $.extend(checkboxBinding, {
       }
     }
     console.log(plop)
+    //return Math.random()
     return plop;
   },
   setValue: function(el, value) {
