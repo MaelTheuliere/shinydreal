@@ -3,12 +3,10 @@
 dr_navbarPage <- function(
   title = "DREAL", 
   menu,
-  ...
+  ..., 
+  main_class = "container-fluid"
 ){
-  shiny::tagList(
-    shiny::bootstrapLib(),
-    dreal_dependency(),
-    input_binding(),
+  page_skeleton(
     tags$div(
       class="navbar-container", 
       tags$nav(
@@ -34,7 +32,7 @@ dr_navbarPage <- function(
         )
       ), 
       tags$div(
-        class="container-fluid",
+        class = "container-fluid",
         tagList(
           ...
         )
@@ -42,8 +40,7 @@ dr_navbarPage <- function(
     ),
     includeScript(
       system.file("drealjs/panel.js", package = "meatballs")
-    ),
-    script_footer()
+    ) 
   )
 }
 
