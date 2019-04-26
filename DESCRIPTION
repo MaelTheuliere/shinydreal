@@ -1,16 +1,21 @@
-Package: meatballs
-Title: What the Package Does (one line, title case)
+Package: shinydreal
+Title: Template Shiny DREAL
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.4.4)
-License: What license is it under?
+Authors@R: person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre"))
+Description: Template Shiny pour la DREAL.
+License: file LICENCE
+Depends: R (>= 2.10)
 Encoding: UTF-8
 LazyData: true
 Imports: 
     shiny,
     htmltools,
-    pkgload
+    attempt,
+    glue
 RoxygenNote: 6.1.0
+Roxygen: list(markdown = TRUE)
 Suggests: 
-    testthat
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

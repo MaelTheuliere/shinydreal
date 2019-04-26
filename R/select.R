@@ -1,3 +1,24 @@
+#' Select Input
+#'
+#' @inheritParams dr_checkboxGroupInput
+#' @export
+#'
+#' @examples
+#' if  (interactive()){
+#'    library(shiny)
+#'    ui <- function(request){
+#'      dr_fluidPage(
+#'        h2("plop"),
+#'        tagList(
+#'          dr_selectInput("a", "Une selection", choices= letters[1:5])
+#'        )
+#'      )
+#'    }
+#'    server <- function(input, output, session){
+#'      observe({ print(input$a) })
+#'    }
+#'    shinyApp(ui, server)
+#' }
 dr_selectInput <- function(
   inputId, 
   label, 

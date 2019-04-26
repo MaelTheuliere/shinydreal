@@ -1,8 +1,9 @@
-
+# INTERNAL
+#' @importFrom htmltools htmlDependency
 dreal_dependency <- function() {
-  htmltools::htmlDependency(
+  htmlDependency(
     "dreal","0.1.0",
-    src = system.file("dist", package = "meatballs"),
+    src = system.file("dist", package = "shinydreal"),
     stylesheet = c(
       "vendors/bootstrap/css/bootstrap.min.css",
       "vendors/jquery-ui/css/jquery-ui.min.css",
@@ -21,10 +22,11 @@ dreal_dependency <- function() {
     )
   )
 }
+#' @importFrom htmltools htmlDependency
 input_binding <- function() {
   htmltools::htmlDependency(
     "drealjs","0.1.0",
-    src = system.file("drealjs", package = "meatballs"),
+    src = system.file("drealjs", package = "shinydreal"),
     script = c(
       "input-fleche.js",
       "input-nav.js",
@@ -39,18 +41,20 @@ input_binding <- function() {
     )
   )
 }
+#' @importFrom htmltools htmlDependency
 icons_binding <- function() {
   htmltools::htmlDependency(
     "line-awesome","0.1.0",
-    src = system.file("line-awesome", package = "meatballs"),
+    src = system.file("line-awesome", package = "shinydreal"),
     all_files = TRUE
   )
 }
 
+#' @importFrom shiny addResourcePath tagList
 script_footer <- function(){
   addResourcePath(
     "js", 
-    system.file("dist/js", package = "meatballs")
+    system.file("dist/js", package = "shinydreal")
   )
   tagList(
     HTML(

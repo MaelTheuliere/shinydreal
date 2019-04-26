@@ -1,4 +1,38 @@
-dr_checkbox <- function(
+#' Checkbox
+#'
+#' @param inputId id, récupéré côté serveur.
+#' @param label Titre de la checkbox.
+#' @param choices Choix possibles
+#' @param selected Choix sélectionné au départ (part défaut, le premier est pris).
+#' @param choiceNames Nom des choix, seront récupérés par le serveur. Par défaut, le nom des choix est repris.
+#' @param type "primary" ou "secondary", couleur de la checkbox.
+#' 
+#' @seealso 
+#' Voir également `\link[shiny]{checkboxGroupInput}`.
+#' 
+#' @return Un objet Shiny contenant une checkbox.
+#' @export
+#' @importFrom htmltools tagList tags HTML
+#'
+#' @examples
+#' if  (interactive()){
+#'    library(shiny)
+#'    ui <- function(request){
+#'      dr_fluidPage(
+#'        h2("plop"),
+#'        tagList(
+#'          dr_checkboxGroupInput("a", "Une checkbox", choices = letters[1:4]) ,
+#'          dr_checkboxGroupInput("b", "Un Autre", choices = letters[1:4], type = "secondary")
+#'        )
+#'      )
+#'    }
+#'    server <- function(input, output, session){
+#'      observe({ print(input$a) })
+#'      observe({ print(input$b) })
+#'    }
+#'    shinyApp(ui, server)
+#' }
+dr_checkboxGroupInput <- function(
   inputId, 
   label = NULL, 
   choices, 

@@ -30,21 +30,26 @@ incrementButton <- function(inputId, label, choices) {
     
 }
 ui <- function(request){
-  dr_fluidPage(
-    h2("plop"),
-    tagList(
-      incrementButton("plop", "plop", letters[1:3])
-    #   HTML('<div >
-    #             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
-    #             <div class="dropdown-menu">
-    #                 <a class="dropdown-item" href="#">Action</a>
-    #                 <a class="dropdown-item" href="#">Another action</a>
-    #                 <a class="dropdown-item" href="#">Something else here</a>
-    #                 <div class="dropdown-divider"></div>
-    #                 <a class="dropdown-item" href="#">Separated link</a>
-    #             </div>
-    #         </div>')
-  )
+  dr_sidebarPage(
+    "plop",
+    sidebar = dr_sidebarItems(
+      dr_sidebarItem("un", "un"),
+      dr_sidebarItem("deux", "deux"),
+      dr_sidebarItem("trois", "trois")
+    ), 
+    dr_panel(
+      id = "un",
+      dr_icons("la-wheelchair", size = 12)
+    ),
+    dr_panel(
+      id = "deux",
+      dr_icons("la-wordpress", size = 12)
+    ),
+    dr_panel(
+      id = "trois",
+      dr_icons("la-youtube", size = 12)
+    )
+    
   )
 }
 

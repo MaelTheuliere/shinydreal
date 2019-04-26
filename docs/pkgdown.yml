@@ -1,0 +1,7 @@
+pandoc: '2.4'
+pkgdown: 1.1.0
+pkgdown_sha: ~
+articles:
+  a_getting_started: a_getting_started.html
+  b_inputs: b_inputs.html
+

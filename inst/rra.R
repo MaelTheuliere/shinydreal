@@ -1,13 +1,9 @@
-pkgload::load_all()
 library(shiny)
-rm(list = ls())
-
-
 ui <- function(request){
   dr_fluidPage(
     h2("plop"),
     tagList(
-      dr_selectInput("plop", "pouet", letters)
+      dr_sm_actionButton("a", "Un bouton")
     )
   )
 }
@@ -15,7 +11,7 @@ ui <- function(request){
 server <- function(input, output, session){
   
   observe({
-    print(input$plop)
+    print(input$a)
   })
 }
 

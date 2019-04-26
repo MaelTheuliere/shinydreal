@@ -1,3 +1,30 @@
+#' Boutons on off
+#' 
+#' Boutons on off rectables ou ronds. Côté serveur, renvoie 0 is ON, 1 si OFF.
+#'
+#' @param inputId ID à récupérer côté serveur.
+#'
+#' @return Un objet Shiny. 
+#' @export
+#' @rdname onoff
+#' @importFrom htmltools tags
+#'
+#' @examples
+#' if  (interactive()){
+#'    library(shiny)
+#'    ui <- function(request){
+#'      dr_fluidPage(
+#'        h2("plop"),
+#'        tagList(
+#'          dr_onOff("a")
+#'        )
+#'      )
+#'    }
+#'    server <- function(input, output, session){
+#'      observe({ print(input$a) })
+#'    }
+#'    shinyApp(ui, server)
+#' }
 dr_onOff <- function(
   inputId
 ){
@@ -20,6 +47,9 @@ dr_onOff <- function(
   )
 }
 
+#' @export
+#' @rdname onoff
+#' @importFrom htmltools tags
 dr_sq_onOff <- function(
   inputId
 ){

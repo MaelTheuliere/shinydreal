@@ -1,5 +1,5 @@
-$(document).on("click", ".navigation", function(evt) {
-  debugger;
+$(document).on("click", ".navigationbutton", function(evt) {
+  //debugger;
   // evt.target is the button that was clicked
   var el = $(evt.target);
 
@@ -14,11 +14,12 @@ var navigationBinding = new Shiny.InputBinding();
 
 $.extend(navigationBinding, {
   find: function(scope) {
-    return $(scope).find(".navigation");
+    return $(scope).find(".navigationbutton");
   },
   getValue: function(el) {  
     return parseInt($(el).data("value"));
   },
+  
   setValue: function(el, value) {
     $(el).value(value);
   },

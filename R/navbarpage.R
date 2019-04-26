@@ -1,9 +1,17 @@
-#' @import htmltools
-#' @import shiny
+#' Page avec navBar
+#'
+#' @param title Titre de la page.
+#' @param menu Contenu du menu.
+#' @param body Corps de la page.
+#' @param main_class Classe du corps de la page.
+#'
+#' @return Un objet Shiny. 
+#' @export
+#' @importFrom shiny tags includeScript
 dr_navbarPage <- function(
   title = "DREAL", 
   menu,
-  ..., 
+  body, 
   main_class = "container-fluid"
 ){
   page_skeleton(
@@ -33,17 +41,22 @@ dr_navbarPage <- function(
       ), 
       tags$div(
         class = "container-fluid",
-        tagList(
-          ...
-        )
+        body
       )
     ),
     includeScript(
-      system.file("drealjs/panel.js", package = "meatballs")
+      system.file("drealjs/panel.js", package = "shinydreal")
     ) 
   )
 }
 
+
+
+#' Menu de navbar
+#'
+#' @param ... contenu du menu
+#' @export
+#' @importFrom htmltools tags tagList
 dr_navItems <- function(
   ...
 ) {
@@ -54,7 +67,14 @@ dr_navItems <- function(
     )
   )
 }
-  
+
+
+#' Élément de menu
+#'
+#' @param id Id du menu, doit correspondre à un id de `dr_panel`.
+#' @param label Texte de l'élément de menu. 
+#' @export
+#' @importFrom htmltools tags
 dr_navItem <- function(
   id, label
 ){

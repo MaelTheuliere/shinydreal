@@ -1,6 +1,7 @@
+#' @importFrom shiny tagList bootstrapLib
 page_skeleton <- function(...){
-  shiny::tagList(
-    shiny::bootstrapLib(),
+  tagList(
+    bootstrapLib(),
     dreal_dependency(),
     input_binding(),
     icons_binding(),

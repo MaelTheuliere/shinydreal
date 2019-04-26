@@ -1,0 +1,204 @@
+---
+title: "Éléments visuels"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{elements_visuels}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>", 
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(shinydreal)
+```
+
+## Les éléments visuels de `{shinydreal}`
+
+### Bouttons 
+
+Il y a trois tailles de boutons, chacun pouvant prendre trois formes. 
+
++ tailles : "sm", "", "lg", pour small, classique et large. 
++ type : "primary", "secondary" ou "info"
+
+```{r}
+dr_fluidPage(
+ dr_sm_actionButton("a", "Un bouton") ,
+ dr_actionButton("b", "Un bouton") ,
+ dr_lg_actionButton("c", "Un bouton")
+)
+
+dr_fluidPage(
+ dr_actionButton("d", "Un bouton", type = "primary") ,
+ dr_actionButton("e", "Un bouton", type = "secondary") ,
+ dr_actionButton("f", "Un bouton", type = "info")
+)
+```
+
+### checkbox
+
+Une checkbox permet de cliquer sur plusieurs éléments
+
+```{r}
+dr_fluidPage(
+ dr_checkboxGroupInput("a", "Une checkbox", choices = letters[1:4]) ,
+ dr_checkboxGroupInput("b", "Un Autre", choices = letters[1:4], type = "secondary")
+)
+```
+
+### checkbox & radioButton
+
+Une checkbox permet de cliquer sur plusieurs éléments, un radioButton sur un seul.
+
+```{r}
+dr_fluidPage(
+ dr_checkboxGroupInput("a", "Une checkbox", choices = letters[1:4]) ,
+ dr_radioButton("b", "Un Autre", choices = letters[1:4], type = "secondary")
+)
+```
+
+### dateRange
+
+Un calendrier. Prend les mêmes paramètres que `shiny::dateRange`.
+
+```{r}
+dr_fluidPage(
+  dr_dateRangeInput("a", "Choisir une date")
+)
+```
+
+### dr_arrow_nav & dr_square_nav
+
+Deux flêches, se comportant comme des actionButtons. 
+
+```{r}
+dr_fluidPage(
+  dr_arrow_nav("gauche", "droite")
+)
+```
+
+Deux rectangles avec texte, se comportant comme des actionButtons. 
+
+```{r}
+dr_fluidPage(
+  dr_quare_nav("gauche", "droite")
+)
+```
+
+### dr_icons
+
+Librairie d'icônes.
+
++ `dr_*`: icônes personnalisées DREAL
++ `la_*` : icôntes de la librairie [Line Awesome](https://icones8.fr/line-awesome)
+
+```{r}
+dr_fluidPage(
+  tagList(
+    dr_icons("la-jsfiddle"),
+    dr_icons("drl-explosion", size = 2),
+    dr_icons("drl-cadastre", size = 7, color = 'red')
+  )
+)
+```
+
+Toute la liste : 
+
+```{r eval = TRUE}
+dr_icon_list
+```
+
+### dr_arrow_nav & dr_square_nav
+
+Un bouton on/off ovale.
+
+```{r}
+dr_fluidPage(
+  dr_onOff("square")
+)
+```
+
+Un bouton on/off rectangulaire.
+
+```{r}
+dr_fluidPage(
+  dr_sq_onOff("square")
+)
+```
+
+### dr_progress & update_dr_progress
+
+Une barre de progression, modifiable depuis le serveur. Deux couleurs : primary et secondary.
+
+```{r}
+library(shiny)
+ui <- function(request){
+  dr_fluidPage(
+    h2("plop"),
+    tagList(
+      dr_progress("a", value = 25), 
+      dr_actionButton("go", "dance")
+    )
+  )
+}
+server <- function(input, output, session){
+  observeEvent(input$go, {
+      update_dr_progress(session, "a", sample(1:100, 1)) 
+  })
+}
+shinyApp(ui, server)
+```
+
+### dr_sliderInput
+
+Un slider entre deux valeurs. 
+
+```{r}
+dr_fluidPage(
+  dr_sliderInput("a", 1, 10, 5)
+)
+```
+
+### dr_selectInput
+
+Input à choix multiples.
+
+```{r}
+dr_fluidPage(
+  dr_selectInput("a", "Une selection", choices= letters[1:5])
+)
+```
+
+### dr_tableOutput
+
+Il existe deux formats de tables : `"striped"` et `"bordered"`
+
+```{r}
+dr_fluidPage(
+  dr_tableOutput("a", "striped"),
+  dr_tableOutput("b", "bordered")
+)
+```
+
+### dr_blockquote & dr_ul
+
+Éléments typographiques : citations et liste 
+
+```{r}
+dr_fluidPage(
+  dr_ul(
+    tags$li("am"),
+    tags$li("stram"),
+    tags$li("gram")
+  ),
+  dr_blockquote("pic et pic et", footer = "collegram")
+)
+```
+

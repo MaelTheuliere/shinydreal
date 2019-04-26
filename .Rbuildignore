@@ -5,3 +5,10 @@
 ^\./app\.R$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^dev\.R$
+^app\.R$
+^\.gitlab-ci\.yml$
+^deploy_history\.txt$
+^rsconnect$

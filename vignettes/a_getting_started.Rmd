@@ -1,0 +1,147 @@
+---
+title: "Débuter avec shinydreal"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{debuter}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+  
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+  )
+```
+  
+## Avant de commencer 
+  
+  Étant un template `{shiny}`, `{shinydreal}` fonctionne en combinaison avec `{shiny}` (il faut donc charger les deux).
+  
+```{r setup}
+library(shiny)
+library(shinydreal)
+```
+
+## Les pages
+
+Il existe trois types de pages : 
+
++ `dr_fluidPage()`, une page simple, sur le modèle de `shiny::fluidPage()`. 
++ `dr_navbarPage()`, une page avec navigation sur le dessus.
++ `dr_sidebarPage()`, une page avec navigation sur le côté. 
+
+### `dr_fluidPage()`
+
+Page simple:
+
+```{r eval = FALSE}
+ui <- function(request){
+  dr_fluidPage(
+    h2("plop"),
+    plotOutput("plot")
+  )
+}
+
+server <- function(input, output, session){
+  output$plot <- renderPlot({
+    plot(iris)
+  })
+}
+
+shinyApp(ui, server)
+
+```
+
+### `dr_navbarPage()` 
+
+__NOTES__ : il faut faire correspondre l'id de `dr_navItem` à l'id correspondant dans `dr_panel`.
+
+```{r eval = FALSE}
+ui <- function(request){
+  dr_navbarPage(
+    title = "DREAL", 
+    menu = dr_navItems(
+      dr_navItem(id = "un","Am"),
+      dr_navItem(id = "deux","Stram"),
+      dr_navItem(id = "trois","Gram")
+    ), 
+    body = tagList(
+      dr_panel(
+        id = "un",
+       plotOutput("plot1")
+      ),
+      dr_panel(
+        id = "deux",
+        plotOutput("plot2")
+      ),
+      dr_panel(
+        id = "trois",
+        plotOutput("plot3")
+      )
+    )
+  )
+}
+
+server <- function(input, output, session){
+  output$plot1 <- renderPlot({
+    plot(iris)
+  })
+  output$plot2 <- renderPlot({
+    plot(airquality)
+  })
+  output$plot3 <- renderPlot({
+    plot(mtcars)
+  })
+}
+
+shinyApp(ui, server)
+
+```
+
+###  `dr_sidebarPage()`
+
+Cette pagination reprend le même principe que `dr_navbarPage()`, sauf que `menu` devient `sidebar`, et `dr_navItem(s)` `dr_sidebarItem(s)`.
+
+```{r eval = FALSE}
+ui <- function(request){
+  dr_sidebarPage(
+    sidebar = dr_sidebarItems(
+      h3("DREAL"),
+      dr_sidebarItem(id = "un","Am"),
+      dr_sidebarItem(id = "deux","Stram"),
+      dr_sidebarItem(id = "trois","Gram")
+    ), 
+    body = tagList(
+      dr_panel(
+        id = "un",
+        h3("DREAL"),
+       plotOutput("plot1")
+      ),
+      dr_panel(
+        id = "deux",
+        plotOutput("plot2")
+      ),
+      dr_panel(
+        id = "trois",
+        plotOutput("plot3")
+      )
+    )
+  )
+}
+
+server <- function(input, output, session){
+  output$plot1 <- renderPlot({
+    plot(iris)
+  })
+  output$plot2 <- renderPlot({
+    plot(airquality)
+  })
+  output$plot3 <- renderPlot({
+    plot(mtcars)
+  })
+}
+
+shinyApp(ui, server)
+
+```
