@@ -10,9 +10,9 @@ dr_dateRangeInput(inputId, label, start = NULL, end = NULL,
   separator = " et ", width = NULL, autoclose = TRUE)
 }
 \arguments{
-\item{inputId}{ID à récupérer côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 
-\item{label}{Titre du dateRange.}
+\item{label}{Texte de l'élément.}
 
 \item{start}{Date de début.}
 
@@ -28,7 +28,7 @@ dr_dateRangeInput(inputId, label, start = NULL, end = NULL,
 
 \item{weekstart}{Numéro du jour où commence la semaine.}
 
-\item{language}{Langue}
+\item{language}{Langue.}
 
 \item{separator}{Séparateur du dateRange.}
 

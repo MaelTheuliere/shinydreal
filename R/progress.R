@@ -1,7 +1,7 @@
 #' Barre de progression
 #'
-#' @param inputId ID de la barre, à récupérer côté serveur.
-#' @param style "primary" ou "secondary"
+#' @inheritParams dr_sm_actionButton
+#' @param type "primary" ou "secondary"
 #' @param value Taille de la barre (entre 0 et 100)
 #'
 #' @return Une barre de progression.
@@ -30,7 +30,7 @@
 #' }
 dr_progress <- function(
   inputId,
-  style = c("primary", "secondary"),
+  type = c("primary", "secondary"),
   value = 25
 ){
   style <- match.arg(style)
@@ -40,7 +40,7 @@ dr_progress <- function(
     class = "progress mb-3",
     tags$div(
       id = inputId,
-      class= glue::glue("progressBar progress-bar bg-{style}"),
+      class= glue::glue("progressBar progress-bar bg-{type}"),
       role="progressbar",
       style = glue::glue("width: {value}%"),
       `aria-valuenow`= as.character(value),

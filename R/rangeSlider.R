@@ -1,6 +1,6 @@
 #' Slider
 #'
-#' @param inputId ID récupéré côté serveur.
+#' @inheritParams dr_sm_actionButton
 #' @param min Minimum du slider.
 #' @param max Maximum du slider.
 #' @param value Valeur de départ du slider.

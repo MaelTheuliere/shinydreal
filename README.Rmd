@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# shinydreal
+
+Package de template Shiny DREAL. 
+
+Pour lire les tutos, rendez-vous dans le menu "Artibles" de cette page.
+
+Pour lire la documentation des fonctions, rendez-vous dans le menu "Reference" de cette page.
+
+## Avant de commencer 
+  
+  Étant un template `{shiny}`, `{shinydreal}` fonctionne en combinaison avec `{shiny}` (il faut donc charger les deux).
+  
+```{r setup}
+library(shiny)
+library(shinydreal)
+```
+
+Il existe trois examples d'apps dans l'application. On peut les lister en lançant :
+
+```{r}
+dr_examples()
+```
+
+Ensuite, chaque example peut être relancé en utilisant le nom de l'app en paramètre de la fonction. 
+
+```{r eval = FALSE}
+dr_examples("01_fluidpage.R")
+```

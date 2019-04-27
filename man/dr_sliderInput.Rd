@@ -7,7 +7,7 @@
 dr_sliderInput(inputId, min, max, value)
 }
 \arguments{
-\item{inputId}{ID récupéré côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 
 \item{min}{Minimum du slider.}
 

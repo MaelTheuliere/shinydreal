@@ -12,3 +12,4 @@
 ^\.gitlab-ci\.yml$
 ^deploy_history\.txt$
 ^rsconnect$
+^README\.Rmd$

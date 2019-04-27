@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • shinydreal</title>
+<title>Date Range — dr_dateRangeInput • shinydreal</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -29,7 +29,10 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Date Range — dr_dateRangeInput" />
+
+<meta property="og:description" content="Date Range" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -66,7 +69,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -126,54 +129,119 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Date Range</h1>
+    
+    <div class="hidden name"><code>dr_dateRangeInput.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Date Range</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="button.html">dr_sm_actionButton()</a></code> <code><a href="button.html">dr_actionButton()</a></code> <code><a href="button.html">dr_lg_actionButton()</a></code> </p>
-        </td>
-        <td><p>actionButton</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dr_checkboxGroupInput.html">dr_checkboxGroupInput()</a></code> </p>
-        </td>
-        <td><p>Checkbox Group Input Control</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dr_dateRangeInput.html">dr_dateRangeInput()</a></code> </p>
-        </td>
-        <td><p>dateRangeInput</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>dr_dateRangeInput</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>min</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>format</span> <span class='kw'>=</span> <span class='st'>"yyyy-mm-dd"</span>,
+  <span class='kw'>startview</span> <span class='kw'>=</span> <span class='st'>"month"</span>, <span class='kw'>weekstart</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>language</span> <span class='kw'>=</span> <span class='st'>"fr"</span>,
+  <span class='kw'>separator</span> <span class='kw'>=</span> <span class='st'>" et "</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>autoclose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>inputId</th>
+      <td><p>ID de l'input, pour le <code>server</code>.</p></td>
+    </tr>
+    <tr>
+      <th>label</th>
+      <td><p>Texte de l'élément.</p></td>
+    </tr>
+    <tr>
+      <th>start</th>
+      <td><p>Date de début.</p></td>
+    </tr>
+    <tr>
+      <th>end</th>
+      <td><p>Date de fin.</p></td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td><p>Date minimum.</p></td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td><p>Date maximum.</p></td>
+    </tr>
+    <tr>
+      <th>format</th>
+      <td><p>Format de la date.</p></td>
+    </tr>
+    <tr>
+      <th>startview</th>
+      <td><p>Zoom de départ du calendrier.</p></td>
+    </tr>
+    <tr>
+      <th>weekstart</th>
+      <td><p>Numéro du jour où commence la semaine.</p></td>
+    </tr>
+    <tr>
+      <th>language</th>
+      <td><p>Langue.</p></td>
+    </tr>
+    <tr>
+      <th>separator</th>
+      <td><p>Séparateur du dateRange.</p></td>
+    </tr>
+    <tr>
+      <th>width</th>
+      <td><p>Taille.</p></td>
+    </tr>
+    <tr>
+      <th>autoclose</th>
+      <td><p>Fermeture automatique ou non du dateRange.</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>Un objet Shiny contenant un dateRange.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Voir également <code><a href='http://www.rdocumentation.org/packages/shiny/topics/dateRangeInput'>dateRangeInput</a></code>.</p></div>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span>  (<span class='fu'>interactive</span>()){
+   <span class='fu'>library</span>(<span class='no'>shiny</span>)
+   <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>request</span>){
+     <span class='fu'><a href='dr_fluidPage.html'>dr_fluidPage</a></span>(
+       <span class='fu'><a href='http://www.rdocumentation.org/packages/shiny/topics/builder'>h2</a></span>(<span class='st'>"plop"</span>),
+       <span class='fu'><a href='http://www.rdocumentation.org/packages/shiny/topics/tag'>tagList</a></span>(
+         <span class='fu'>dr_dateRangeInput</span>(<span class='st'>"a"</span>, <span class='st'>"Choisir une date"</span>)
+       )
+     )
+   }
+   <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>){
+     <span class='fu'><a href='http://www.rdocumentation.org/packages/shiny/topics/observe'>observe</a></span>({ <span class='fu'>print</span>(<span class='no'>input</span>$<span class='no'>a</span>) })
+   }
+   <span class='fu'><a href='http://www.rdocumentation.org/packages/shiny/topics/shinyApp'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+}</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#see-also">See also</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 

@@ -1,7 +1,6 @@
 #' Date Range
 #'
-#' @param inputId ID à récupérer côté serveur.
-#' @param label Titre du dateRange.
+#' @inheritParams dr_sm_actionButton
 #' @param start Date de début.
 #' @param end Date de fin.
 #' @param min Date minimum.
@@ -9,7 +8,7 @@
 #' @param format Format de la date. 
 #' @param startview Zoom de départ du calendrier.
 #' @param weekstart Numéro du jour où commence la semaine. 
-#' @param language Langue
+#' @param language Langue.
 #' @param separator Séparateur du dateRange. 
 #' @param width Taille. 
 #' @param autoclose Fermeture automatique ou non du dateRange.

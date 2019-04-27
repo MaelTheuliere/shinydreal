@@ -8,15 +8,15 @@ dr_checkboxGroupInput(inputId, label = NULL, choices, selected = NULL,
   choiceNames = NULL, type = c("primary", "secondary"))
 }
 \arguments{
-\item{inputId}{id, récupéré côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 
-\item{label}{Titre de la checkbox.}
+\item{label}{Texte de l'élément.}
 
-\item{choices}{Choix possibles}
+\item{choices}{Choix possibles.}
 
 \item{selected}{Choix sélectionné au départ (part défaut, le premier est pris).}
 
-\item{choiceNames}{Nom des choix, seront récupérés par le serveur. Par défaut, le nom des choix est repris.}
+\item{choiceNames}{Nom des choix, seront récupérés par le serveur. Par défaut, \code{choices} est repris.}
 
 \item{type}{"primary" ou "secondary", couleur de la checkbox.}
 }

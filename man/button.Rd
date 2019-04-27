@@ -16,9 +16,9 @@ dr_lg_actionButton(inputId, label, icon = NULL, width = NULL, ...,
   type = c("primary", "secondary", "info"))
 }
 \arguments{
-\item{inputId}{ID à récupérer côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 
-\item{label}{Texte du bouton.}
+\item{label}{Texte de l'élément.}
 
 \item{icon}{Icon du bouton.}
 
@@ -26,7 +26,7 @@ dr_lg_actionButton(inputId, label, icon = NULL, width = NULL, ...,
 
 \item{...}{Attributs à passer au bouton.}
 
-\item{type}{Type du bouton, pour passer des couleurs peut être l'un des suivants : \code{c("primary", "secondary", "info")}.}
+\item{type}{Type du bouton, pour passer des couleurs. Peut être l'un des suivants : \code{c("primary", "secondary", "info")}.}
 }
 \value{
 Un objet Shiny contenant un actionButton.

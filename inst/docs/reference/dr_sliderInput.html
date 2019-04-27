@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>actionButton — dr_sm_actionButton • shinydreal</title>
+<title>Slider — dr_sliderInput • shinydreal</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -29,9 +29,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 
-<meta property="og:title" content="actionButton — dr_sm_actionButton" />
+<meta property="og:title" content="Slider — dr_sliderInput" />
 
-<meta property="og:description" content="Boutons d'action, comportement similaire à actionButton." />
+<meta property="og:description" content="Slider" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -131,68 +131,53 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>actionButton</h1>
+    <h1>Slider</h1>
     
-    <div class="hidden name"><code>button.Rd</code></div>
+    <div class="hidden name"><code>dr_sliderInput.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Boutons d'action, comportement similaire à <code><a href='http://www.rdocumentation.org/packages/shiny/topics/actionButton'>actionButton</a></code>.</p>
+    <p>Slider</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>dr_sm_actionButton</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>,
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"primary"</span>, <span class='st'>"secondary"</span>, <span class='st'>"info"</span>))
-
-<span class='fu'>dr_actionButton</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>,
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"primary"</span>, <span class='st'>"secondary"</span>, <span class='st'>"info"</span>))
-
-<span class='fu'>dr_lg_actionButton</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>,
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"primary"</span>, <span class='st'>"secondary"</span>, <span class='st'>"info"</span>))</pre>
+    <pre class="usage"><span class='fu'>dr_sliderInput</span>(<span class='no'>inputId</span>, <span class='no'>min</span>, <span class='no'>max</span>, <span class='no'>value</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>inputId</th>
-      <td><p>ID à récupérer côté serveur.</p></td>
+      <td><p>ID de l'input, pour le <code>server</code>.</p></td>
     </tr>
     <tr>
-      <th>label</th>
-      <td><p>Texte du bouton.</p></td>
+      <th>min</th>
+      <td><p>Minimum du slider.</p></td>
     </tr>
     <tr>
-      <th>icon</th>
-      <td><p>Icon du bouton.</p></td>
+      <th>max</th>
+      <td><p>Maximum du slider.</p></td>
     </tr>
     <tr>
-      <th>width</th>
-      <td><p>Taille du bouton.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Attributs à passer au bouton.</p></td>
-    </tr>
-    <tr>
-      <th>type</th>
-      <td><p>Type du bouton, pour passer des couleurs peut être l'un des suivants : <code>c("primary", "secondary", "info")</code>.</p></td>
+      <th>value</th>
+      <td><p>Valeur de départ du slider.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <div class='dont-index'><p>Voir également <code><a href='http://www.rdocumentation.org/packages/shiny/topics/actionButton'>actionButton</a></code>.</p></div>
+    <p>Une tagList avec un sliderInput.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span>  (<span class='fu'>interactive</span>()){
    <span class='fu'>library</span>(<span class='no'>shiny</span>)
    <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>request</span>){
-     <span class='fu'>dr_fluidPage</span>(
+     <span class='fu'><a href='dr_fluidPage.html'>dr_fluidPage</a></span>(
        <span class='fu'><a href='http://www.rdocumentation.org/packages/shiny/topics/builder'>h2</a></span>(<span class='st'>"plop"</span>),
        <span class='fu'><a href='http://www.rdocumentation.org/packages/shiny/topics/tag'>tagList</a></span>(
-         <span class='fu'>dr_sm_actionButton</span>(<span class='st'>"a"</span>, <span class='st'>"Un bouton"</span>)
+         <span class='fu'>dr_sliderInput</span>(<span class='st'>"a"</span>, <span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>5</span>)
        )
      )
    }
@@ -207,7 +192,7 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#value">Value</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

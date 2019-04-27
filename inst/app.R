@@ -1,6 +1,5 @@
 # To deploy, run: rsconnect::deployApp()
 
-pkgload::load_all()
 library(shinipsum)
 options( "golem.app.prod" = TRUE)
 lapply(

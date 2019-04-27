@@ -23,6 +23,19 @@ library(shiny)
 library(shinydreal)
 ```
 
+Il existe trois examples d'apps dans l'application. On peut les lister en lançant :
+
+```{r}
+dr_examples()
+```
+
+Ensuite, chaque example peut être relancé en utilisant le nom de l'app en paramètre de la fonction. 
+
+```{r eval = FALSE}
+dr_examples("01_fluidpage.R")
+```
+
+
 ## Les pages
 
 Il existe trois types de pages : 

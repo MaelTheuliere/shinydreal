@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, eval = TRUE}
 library(shinydreal)
 ```
 
@@ -97,7 +97,7 @@ dr_fluidPage(
 Librairie d'icônes.
 
 + `dr_*`: icônes personnalisées DREAL
-+ `la_*` : icôntes de la librairie [Line Awesome](https://icones8.fr/line-awesome)
++ `la_*` : icônes de la librairie [Line Awesome](https://icones8.fr/line-awesome)
 
 ```{r}
 dr_fluidPage(

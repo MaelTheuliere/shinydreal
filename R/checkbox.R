@@ -1,10 +1,9 @@
 #' Checkbox
 #'
-#' @param inputId id, récupéré côté serveur.
-#' @param label Titre de la checkbox.
-#' @param choices Choix possibles
+#' @inheritParams dr_sm_actionButton
+#' @param choices Choix possibles.
 #' @param selected Choix sélectionné au départ (part défaut, le premier est pris).
-#' @param choiceNames Nom des choix, seront récupérés par le serveur. Par défaut, le nom des choix est repris.
+#' @param choiceNames Nom des choix, seront récupérés par le serveur. Par défaut, `choices` est repris.
 #' @param type "primary" ou "secondary", couleur de la checkbox.
 #' 
 #' @seealso 

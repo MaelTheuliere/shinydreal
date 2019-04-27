@@ -35,7 +35,7 @@
 -->
 </head>
 <body>
-    <div class="container template-home">
+    <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -98,11 +98,33 @@
 
       
       </header><div class="row">
-  <div class="contents col-md-9">
-    Template Shiny pour la DREAL.
+  <div class="col-md-9 contents">
+    
+
+    
+    
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="shinydreal" class="section level1">
+<div class="page-header"><h1 class="hasAnchor">
+<a href="#shinydreal" class="anchor"></a>shinydreal</h1></div>
+<p>Package de template Shiny DREAL.</p>
+<p>Pour lire la documentation, rendez-vous dans</p>
+<div id="avant-de-commencer" class="section level2">
+<h2 class="hasAnchor">
+<a href="#avant-de-commencer" class="anchor"></a>Avant de commencer</h2>
+<p>Étant un template <code>{shiny}</code>, <code>{shinydreal}</code> fonctionne en combinaison avec <code>{shiny}</code> (il faut donc charger les deux).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">library</span>(shinydreal)</a></code></pre></div>
+<p>Il existe trois examples d’apps dans l’application. On peut les lister en lançant :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="reference/dr_examples.html">dr_examples</a></span>()</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co">#&gt; [1] "01_fluidpage.R" "02_sideBar.R"   "03_navBar.R"</span></a></code></pre></div>
+<p>Ensuite, chaque example peut être relancé en utilisant le nom de l’app en paramètre de la fonction.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="reference/dr_examples.html">dr_examples</a></span>(<span class="st">"01_fluidpage.R"</span>)</a></code></pre></div>
+</div>
+</div>
   </div>
 
-  <div class="col-md-3" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
@@ -123,7 +145,8 @@
 </ul>
 </div>
 
-  </div>
+      </div>
+
 </div>
 
 

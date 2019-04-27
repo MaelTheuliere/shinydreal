@@ -10,7 +10,7 @@ dr_onOff(inputId)
 dr_sq_onOff(inputId)
 }
 \arguments{
-\item{inputId}{ID à récupérer côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 }
 \value{
 Un objet Shiny.

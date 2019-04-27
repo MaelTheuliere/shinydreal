@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>dateRangeInput — dr_dateRangeInput • shinydreal</title>
+<title>Élément de menu — dr_navItem • shinydreal</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -29,9 +29,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 
-<meta property="og:title" content="dateRangeInput — dr_dateRangeInput" />
+<meta property="og:title" content="Élément de menu — dr_navItem" />
 
-<meta property="og:description" content="dateRangeInput" />
+<meta property="og:description" content="Élément de menu" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -131,94 +131,29 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>dateRangeInput</h1>
+    <h1>Élément de menu</h1>
     
-    <div class="hidden name"><code>dr_dateRangeInput.Rd</code></div>
+    <div class="hidden name"><code>dr_navItem.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>dateRangeInput</p>
+    <p>Élément de menu</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>dr_dateRangeInput</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>min</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>format</span> <span class='kw'>=</span> <span class='st'>"yyyy-mm-dd"</span>,
-  <span class='kw'>startview</span> <span class='kw'>=</span> <span class='st'>"month"</span>, <span class='kw'>weekstart</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>language</span> <span class='kw'>=</span> <span class='st'>"fr"</span>,
-  <span class='kw'>separator</span> <span class='kw'>=</span> <span class='st'>" et "</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>autoclose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>dr_navItem</span>(<span class='no'>id</span>, <span class='no'>label</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>inputId</th>
-      <td><p>The <code>input</code> slot that will be used to access the value.</p></td>
+      <th>id</th>
+      <td><p>Id du menu, doit correspondre à un id de <code>dr_panel</code>.</p></td>
     </tr>
     <tr>
       <th>label</th>
-      <td><p>Display label for the control, or <code>NULL</code> for no label.</p></td>
-    </tr>
-    <tr>
-      <th>start</th>
-      <td><p>The initial start date. Either a Date object, or a string in
-<code>yyyy-mm-dd</code> format. If NULL (the default), will use the current
-date in the client's time zone.</p></td>
-    </tr>
-    <tr>
-      <th>end</th>
-      <td><p>The initial end date. Either a Date object, or a string in
-<code>yyyy-mm-dd</code> format. If NULL (the default), will use the current
-date in the client's time zone.</p></td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td><p>The minimum allowed date. Either a Date object, or a string in
-<code>yyyy-mm-dd</code> format.</p></td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td><p>The maximum allowed date. Either a Date object, or a string in
-<code>yyyy-mm-dd</code> format.</p></td>
-    </tr>
-    <tr>
-      <th>format</th>
-      <td><p>The format of the date to display in the browser. Defaults to
-<code>"yyyy-mm-dd"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>startview</th>
-      <td><p>The date range shown when the input object is first clicked.
-Can be "month" (the default), "year", or "decade".</p></td>
-    </tr>
-    <tr>
-      <th>weekstart</th>
-      <td><p>Which day is the start of the week. Should be an integer
-from 0 (Sunday) to 6 (Saturday).</p></td>
-    </tr>
-    <tr>
-      <th>language</th>
-      <td><p>The language used for month and day names. Default is "en".
-Other valid values include "ar", "az", "bg", "bs", "ca", "cs", "cy", "da",
-"de", "el", "en-AU", "en-GB", "eo", "es", "et", "eu", "fa", "fi", "fo",
-"fr-CH", "fr", "gl", "he", "hr", "hu", "hy", "id", "is", "it-CH", "it",
-"ja", "ka", "kh", "kk", "ko", "kr", "lt", "lv", "me", "mk", "mn", "ms",
-"nb", "nl-BE", "nl", "no", "pl", "pt-BR", "pt", "ro", "rs-latin", "rs",
-"ru", "sk", "sl", "sq", "sr-latin", "sr", "sv", "sw", "th", "tr", "uk",
-"vi", "zh-CN", and "zh-TW".</p></td>
-    </tr>
-    <tr>
-      <th>separator</th>
-      <td><p>String to display between the start and end input boxes.</p></td>
-    </tr>
-    <tr>
-      <th>width</th>
-      <td><p>The width of the input, e.g. <code>'400px'</code>, or <code>'100%'</code>;
-see <code>validateCssUnit</code>.</p></td>
-    </tr>
-    <tr>
-      <th>autoclose</th>
-      <td><p>Whether or not to close the datepicker immediately when a
-date is selected.</p></td>
+      <td><p>Texte de l'élément de menu.</p></td>
     </tr>
     </table>
     

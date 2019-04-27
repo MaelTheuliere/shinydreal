@@ -2,12 +2,12 @@
 #'
 #' Boutons d'action, comportement similaire à `\link[shiny]{actionButton}`.
 #'
-#' @param inputId ID à récupérer côté serveur.
-#' @param label Texte du bouton.
+#' @param inputId ID de l'input, pour le `server`.
+#' @param label Texte de l'élément.
 #' @param icon Icon du bouton. 
 #' @param width Taille du bouton. 
 #' @param ... Attributs à passer au bouton. 
-#' @param type Type du bouton, pour passer des couleurs peut être l'un des suivants : `c("primary", "secondary", "info")`. 
+#' @param type Type du bouton, pour passer des couleurs. Peut être l'un des suivants : `c("primary", "secondary", "info")`. 
 #' 
 #' @seealso 
 #' Voir également `\link[shiny]{actionButton}`.

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Checkbox Group Input Control — dr_checkboxGroupInput • shinydreal</title>
+<title>Menu de sidebar — dr_sidebarItems • shinydreal</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -29,9 +29,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 
-<meta property="og:title" content="Checkbox Group Input Control — dr_checkboxGroupInput" />
+<meta property="og:title" content="Menu de sidebar — dr_sidebarItems" />
 
-<meta property="og:description" content="Checkbox Group Input Control" />
+<meta property="og:description" content="Menu de sidebar" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -131,60 +131,27 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Checkbox Group Input Control</h1>
+    <h1>Menu de sidebar</h1>
     
-    <div class="hidden name"><code>dr_checkboxGroupInput.Rd</code></div>
+    <div class="hidden name"><code>dr_sidebarItems.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Checkbox Group Input Control</p>
+    <p>Menu de sidebar</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>dr_checkboxGroupInput</span>(<span class='no'>inputId</span>, <span class='kw'>label</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>choices</span>, <span class='kw'>selected</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>choiceNames</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"primary"</span>, <span class='st'>"secondary"</span>))</pre>
+    <pre class="usage"><span class='fu'>dr_sidebarItems</span>(<span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>inputId</th>
-      <td><p>The <code>input</code> slot that will be used to access the value.</p></td>
-    </tr>
-    <tr>
-      <th>label</th>
-      <td><p>Display label for the control, or <code>NULL</code> for no label.</p></td>
-    </tr>
-    <tr>
-      <th>choices</th>
-      <td><p>List of values to show checkboxes for. If elements of the list
-are named then that name rather than the value is displayed to the user. If
-this argument is provided, then <code>choiceNames</code> and <code>choiceValues</code>
-must not be provided, and vice-versa. The values should be strings; other
-types (such as logicals and numbers) will be coerced to strings.</p></td>
-    </tr>
-    <tr>
-      <th>selected</th>
-      <td><p>The values that should be initially selected, if any.</p></td>
-    </tr>
-    <tr>
-      <th>choiceNames</th>
-      <td><p>List of names and values, respectively,
-that are displayed to the user in the app and correspond to the each
-choice (for this reason, <code>choiceNames</code> and <code>choiceValues</code>
-must have the same length). If either of these arguments is
-provided, then the other <em>must</em> be provided and <code>choices</code>
-<em>must not</em> be provided. The advantage of using both of these over
-a named list for <code>choices</code> is that <code>choiceNames</code> allows any
-type of UI object to be passed through (tag objects, icons, HTML code,
-...), instead of just simple text. See Examples.</p></td>
+      <th>...</th>
+      <td><p>contenu du menu</p></td>
     </tr>
     </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A list of HTML elements that can be added to a UI definition.</p>
     
 
   </div>
@@ -192,9 +159,7 @@ type of UI object to be passed through (tag objects, icons, HTML code,
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-          </ul>
+                </ul>
 
   </div>
 </div>

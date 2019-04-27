@@ -4,12 +4,12 @@
 \alias{dr_progress}
 \title{Barre de progression}
 \usage{
-dr_progress(inputId, style = c("primary", "secondary"), value = 25)
+dr_progress(inputId, type = c("primary", "secondary"), value = 25)
 }
 \arguments{
-\item{inputId}{ID de la barre, à récupérer côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 
-\item{style}{"primary" ou "secondary"}
+\item{type}{"primary" ou "secondary"}
 
 \item{value}{Taille de la barre (entre 0 et 100)}
 }

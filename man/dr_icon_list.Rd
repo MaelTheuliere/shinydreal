@@ -11,4 +11,10 @@ dr_icon_list
 \description{
 Liste des icones
 }
+\details{
+\itemize{
+\item \code{dr_*}: icônes personnalisées DREAL
+\item \code{la_*} : icônes de la librairie \href{https://icones8.fr/line-awesome}{Line Awesome}
+}
+}
 \keyword{data}

@@ -7,11 +7,11 @@
 dr_selectInput(inputId, label, choices, selected = NULL)
 }
 \arguments{
-\item{inputId}{id, récupéré côté serveur.}
+\item{inputId}{ID de l'input, pour le \code{server}.}
 
-\item{label}{Titre de la checkbox.}
+\item{label}{Texte de l'élément.}
 
-\item{choices}{Choix possibles}
+\item{choices}{Choix possibles.}
 
 \item{selected}{Choix sélectionné au départ (part défaut, le premier est pris).}
 }

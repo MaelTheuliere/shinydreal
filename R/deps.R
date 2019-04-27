@@ -24,7 +24,7 @@ dreal_dependency <- function() {
 }
 #' @importFrom htmltools htmlDependency
 input_binding <- function() {
-  htmltools::htmlDependency(
+ htmlDependency(
     "drealjs","0.1.0",
     src = system.file("drealjs", package = "shinydreal"),
     script = c(
@@ -43,7 +43,7 @@ input_binding <- function() {
 }
 #' @importFrom htmltools htmlDependency
 icons_binding <- function() {
-  htmltools::htmlDependency(
+  htmlDependency(
     "line-awesome","0.1.0",
     src = system.file("line-awesome", package = "shinydreal"),
     all_files = TRUE

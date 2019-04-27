@@ -2,7 +2,7 @@
 #' 
 #' Boutons on off rectables ou ronds. Côté serveur, renvoie 0 is ON, 1 si OFF.
 #'
-#' @param inputId ID à récupérer côté serveur.
+#' @inheritParams dr_sm_actionButton
 #'
 #' @return Un objet Shiny. 
 #' @export
