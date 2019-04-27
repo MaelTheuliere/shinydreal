@@ -33,7 +33,7 @@ dr_progress <- function(
   type = c("primary", "secondary"),
   value = 25
 ){
-  style <- match.arg(style)
+  type <- match.arg(type)
   stop_if(value, ~ .x < 0, "value ne doit pas être en dessous de 0")
   stop_if(value, ~ .x > 100, "value ne doit pas être en supérieur à 100")
   tags$div(
