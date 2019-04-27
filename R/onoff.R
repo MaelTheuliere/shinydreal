@@ -30,18 +30,22 @@ dr_onOff <- function(
 ){
   tags$div(
     class = "switch-toggle switch-toggle-lg",
+    style="pointer-events: none",
     tags$label(
       `for` = "switch-toggle-lg",
       class="switch-toggle-body", 
+      style="pointer-events: none",
       tags$input(
         type="checkbox", 
         id="switch-toggle-lg", 
-        class="switch-toggle-input"
+        class="switch-toggle-input", 
+        style = "pointer-events: all"
       ), 
       tags$div(
         id = inputId,
         `data-value` = 0,
-        class="switch-toggle-switch"
+        class="switch-toggle-switch", 
+        style = "pointer-events: all"
       )
     ) 
   )
@@ -55,18 +59,22 @@ dr_sq_onOff <- function(
 ){
   tags$div(
     class = "checkbox-toggle checkbox-toggle-lg",
+    style="pointer-events: none",
     tags$input(
       type="checkbox", 
-      id="checkbox-toggle-lg"
+      id="checkbox-toggle-lg", 
+      style="pointer-events: none"
     ),
     tags$label(
       `for` = "checkbox-toggle-lg",
+      style="pointer-events: none",
       tags$div(
         id = inputId,
         `data-value` = 0,
         class="checkbox-toggle-switch", 
         `data-checked`="On",
-        `data-unchecked`="Off"
+        `data-unchecked`="Off",
+        style = "pointer-events: all"
       )
     ) 
   )

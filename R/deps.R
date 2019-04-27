@@ -34,6 +34,7 @@ input_binding <- function() {
       "input-rangeSlider.js", 
       "input-select.js",
       "input-onoff.js", 
+      "input-sqonOff.js", 
       "input-radioButton.js",
       "input-checkbox.js",
       "input-increment.js",
