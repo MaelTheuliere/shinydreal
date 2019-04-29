@@ -5,6 +5,11 @@ usethis::use_test()
 
 usethis::use_vignette("a_getting_started")
 usethis::use_vignette("b_inputs")
+
+
+# Documentation
+attachment::att_to_description(extra.suggests = "pkgdown")
+
 # Le pkgdown
 visualidentity::build_pkgdown(
   yml = system.file("pkgdown/_pkgdown.yml", package = "thinkridentity"),
@@ -16,7 +21,7 @@ visualidentity::build_pkgdown(
 # visualidentity::open_pkgdown_function(path = "inst/docs")
 # pkg::open_pkgdown()
 
-## __ deploy on rsconnect
+## __ deploy pkgdown on rsconnect
 usethis::use_git_ignore("docs/rsconnect")
 usethis::use_git_ignore("inst/docs/rsconnect")
 usethis::use_git_ignore("rsconnect")
@@ -35,3 +40,7 @@ rsconnect::deployApp(
   server = account_server                    # the Connect server, see rsconnect::accounts()
 )
 setwd(origwd)
+
+# Install from gitlab
+thinkridentity::open_install_git_with_pwd()
+

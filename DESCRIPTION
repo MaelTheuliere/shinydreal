@@ -1,21 +1,29 @@
 Package: shinydreal
 Title: Template Shiny DREAL
 Version: 0.0.0.9000
-Authors@R: person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre"))
+Authors@R: 
+    person(given = "Colin",
+           family = "Fay",
+           role = c("aut", "cre"),
+           email = "colin@thinkr.fr")
 Description: Template Shiny pour la DREAL.
 License: file LICENCE
-Depends: R (>= 2.10)
+Depends: 
+    R (>= 2.10)
+Imports: 
+    attempt,
+    glue,
+    htmltools,
+    shiny,
+    utils
+Suggests: 
+    knitr,
+    pkgdown,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    shiny,
-    htmltools,
-    attempt,
-    glue
-RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
-Suggests: 
-    testthat (>= 2.1.0),
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr
+RoxygenNote: 6.1.1

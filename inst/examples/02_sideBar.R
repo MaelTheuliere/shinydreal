@@ -48,10 +48,7 @@ ui <- function(request){
         )
       )
     )
-    
   )
-  )
-)
 }
 
 server <- function(input, output, session){
