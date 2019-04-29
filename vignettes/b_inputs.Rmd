@@ -21,12 +21,12 @@ library(shinydreal)
 
 ## Les éléments visuels de `{shinydreal}`
 
-### Bouttons 
+### Boutons 
 
 Il y a trois tailles de boutons, chacun pouvant prendre trois formes. 
 
-+ tailles : "sm", "", "lg", pour small, classique et large. 
-+ type : "primary", "secondary" ou "info"
++ tailles : `"sm"`, `""`, `"lg"`, pour small, classique et large. 
++ type : `"primary"`, `"secondary"` ou `"info"`
 
 ```{r}
 dr_fluidPage(
@@ -96,8 +96,8 @@ dr_fluidPage(
 
 Librairie d'icônes.
 
-+ `dr_*`: icônes personnalisées DREAL
-+ `la_*` : icônes de la librairie [Line Awesome](https://icones8.fr/line-awesome)
++ `drl-*`: icônes personnalisées DREAL
++ `la-*` : icônes de la librairie [Line Awesome](https://icones8.fr/line-awesome)
 
 ```{r}
 dr_fluidPage(

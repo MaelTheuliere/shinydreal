@@ -47,7 +47,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">shinydreal</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
       </span>
     </div>
 
@@ -114,8 +114,12 @@
 <h2 class="hasAnchor">
 <a href="#avant-de-commencer" class="anchor"></a>Avant de commencer</h2>
 <p>Étant un template <code>{shiny}</code>, <code>{shinydreal}</code> fonctionne en combinaison avec <code>{shiny}</code> (il faut donc charger les deux).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(shiny)</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">library</span>(shinydreal)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shinydreal)</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">#&gt; Pour lancer l'aide</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co">#&gt; tapez : `dr_help()`</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co">#&gt; </span></a></code></pre></div>
 <p>Il existe trois examples d’apps dans l’application. On peut les lister en lançant :</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="../reference/dr_examples.html">dr_examples</a></span>()</a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="co">#&gt; [1] "01_fluidpage.R" "02_sideBar.R"   "03_navBar.R"</span></a></code></pre></div>
@@ -128,7 +132,7 @@
 <p>Il existe trois types de pages :</p>
 <ul>
 <li>
-<code><a href="../reference/dr_fluidPage.html">dr_fluidPage()</a></code>, une page simple, sur le modèle de <code><a href="http://www.rdocumentation.org/packages/shiny/topics/fluidPage">shiny::fluidPage()</a></code>.</li>
+<code><a href="../reference/dr_fluidPage.html">dr_fluidPage()</a></code>, une page simple, sur le modèle de <code><a href="https://www.rdocumentation.org/packages/shiny/topics/fluidPage">shiny::fluidPage()</a></code>.</li>
 <li>
 <code><a href="../reference/dr_navbarPage.html">dr_navbarPage()</a></code>, une page avec navigation sur le dessus.</li>
 <li>
@@ -141,18 +145,18 @@
 <p>Page simple:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">ui &lt;-<span class="st"> </span><span class="cf">function</span>(request){</a>
 <a class="sourceLine" id="cb4-2" title="2">  <span class="kw"><a href="../reference/dr_fluidPage.html">dr_fluidPage</a></span>(</a>
-<a class="sourceLine" id="cb4-3" title="3">    <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/builder">h2</a></span>(<span class="st">"plop"</span>),</a>
-<a class="sourceLine" id="cb4-4" title="4">    <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot"</span>)</a>
+<a class="sourceLine" id="cb4-3" title="3">    <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/builder">h2</a></span>(<span class="st">"plop"</span>),</a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot"</span>)</a>
 <a class="sourceLine" id="cb4-5" title="5">  )</a>
 <a class="sourceLine" id="cb4-6" title="6">}</a>
 <a class="sourceLine" id="cb4-7" title="7"></a>
 <a class="sourceLine" id="cb4-8" title="8">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session){</a>
-<a class="sourceLine" id="cb4-9" title="9">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb4-10" title="10">    <span class="kw">plot</span>(iris)</a>
+<a class="sourceLine" id="cb4-9" title="9">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb4-10" title="10">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(iris)</a>
 <a class="sourceLine" id="cb4-11" title="11">  })</a>
 <a class="sourceLine" id="cb4-12" title="12">}</a>
 <a class="sourceLine" id="cb4-13" title="13"></a>
-<a class="sourceLine" id="cb4-14" title="14"><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a></code></pre></div>
+<a class="sourceLine" id="cb4-14" title="14"><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a></code></pre></div>
 </div>
 <div id="dr_navbarpage" class="section level3">
 <h3 class="hasAnchor">
@@ -167,36 +171,36 @@
 <a class="sourceLine" id="cb5-6" title="6">      <span class="kw"><a href="../reference/dr_navItem.html">dr_navItem</a></span>(<span class="dt">id =</span> <span class="st">"deux"</span>,<span class="st">"Stram"</span>),</a>
 <a class="sourceLine" id="cb5-7" title="7">      <span class="kw"><a href="../reference/dr_navItem.html">dr_navItem</a></span>(<span class="dt">id =</span> <span class="st">"trois"</span>,<span class="st">"Gram"</span>)</a>
 <a class="sourceLine" id="cb5-8" title="8">    ), </a>
-<a class="sourceLine" id="cb5-9" title="9">    <span class="dt">body =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/tag">tagList</a></span>(</a>
+<a class="sourceLine" id="cb5-9" title="9">    <span class="dt">body =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/tag">tagList</a></span>(</a>
 <a class="sourceLine" id="cb5-10" title="10">      <span class="kw"><a href="../reference/bodyelements.html">dr_panel</a></span>(</a>
 <a class="sourceLine" id="cb5-11" title="11">        <span class="dt">id =</span> <span class="st">"un"</span>,</a>
-<a class="sourceLine" id="cb5-12" title="12">       <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot1"</span>)</a>
+<a class="sourceLine" id="cb5-12" title="12">       <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot1"</span>)</a>
 <a class="sourceLine" id="cb5-13" title="13">      ),</a>
 <a class="sourceLine" id="cb5-14" title="14">      <span class="kw"><a href="../reference/bodyelements.html">dr_panel</a></span>(</a>
 <a class="sourceLine" id="cb5-15" title="15">        <span class="dt">id =</span> <span class="st">"deux"</span>,</a>
-<a class="sourceLine" id="cb5-16" title="16">        <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot2"</span>)</a>
+<a class="sourceLine" id="cb5-16" title="16">        <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot2"</span>)</a>
 <a class="sourceLine" id="cb5-17" title="17">      ),</a>
 <a class="sourceLine" id="cb5-18" title="18">      <span class="kw"><a href="../reference/bodyelements.html">dr_panel</a></span>(</a>
 <a class="sourceLine" id="cb5-19" title="19">        <span class="dt">id =</span> <span class="st">"trois"</span>,</a>
-<a class="sourceLine" id="cb5-20" title="20">        <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot3"</span>)</a>
+<a class="sourceLine" id="cb5-20" title="20">        <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot3"</span>)</a>
 <a class="sourceLine" id="cb5-21" title="21">      )</a>
 <a class="sourceLine" id="cb5-22" title="22">    )</a>
 <a class="sourceLine" id="cb5-23" title="23">  )</a>
 <a class="sourceLine" id="cb5-24" title="24">}</a>
 <a class="sourceLine" id="cb5-25" title="25"></a>
 <a class="sourceLine" id="cb5-26" title="26">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session){</a>
-<a class="sourceLine" id="cb5-27" title="27">  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb5-28" title="28">    <span class="kw">plot</span>(iris)</a>
+<a class="sourceLine" id="cb5-27" title="27">  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb5-28" title="28">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(iris)</a>
 <a class="sourceLine" id="cb5-29" title="29">  })</a>
-<a class="sourceLine" id="cb5-30" title="30">  output<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb5-31" title="31">    <span class="kw">plot</span>(airquality)</a>
+<a class="sourceLine" id="cb5-30" title="30">  output<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb5-31" title="31">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(airquality)</a>
 <a class="sourceLine" id="cb5-32" title="32">  })</a>
-<a class="sourceLine" id="cb5-33" title="33">  output<span class="op">$</span>plot3 &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb5-34" title="34">    <span class="kw">plot</span>(mtcars)</a>
+<a class="sourceLine" id="cb5-33" title="33">  output<span class="op">$</span>plot3 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb5-34" title="34">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(mtcars)</a>
 <a class="sourceLine" id="cb5-35" title="35">  })</a>
 <a class="sourceLine" id="cb5-36" title="36">}</a>
 <a class="sourceLine" id="cb5-37" title="37"></a>
-<a class="sourceLine" id="cb5-38" title="38"><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a></code></pre></div>
+<a class="sourceLine" id="cb5-38" title="38"><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a></code></pre></div>
 </div>
 <div id="dr_sidebarpage" class="section level3">
 <h3 class="hasAnchor">
@@ -206,42 +210,42 @@
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">ui &lt;-<span class="st"> </span><span class="cf">function</span>(request){</a>
 <a class="sourceLine" id="cb6-2" title="2">  <span class="kw"><a href="../reference/dr_sidebarPage.html">dr_sidebarPage</a></span>(</a>
 <a class="sourceLine" id="cb6-3" title="3">    <span class="dt">sidebar =</span> <span class="kw"><a href="../reference/dr_sidebarItems.html">dr_sidebarItems</a></span>(</a>
-<a class="sourceLine" id="cb6-4" title="4">      <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/builder">h3</a></span>(<span class="st">"DREAL"</span>),</a>
+<a class="sourceLine" id="cb6-4" title="4">      <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/builder">h3</a></span>(<span class="st">"DREAL"</span>),</a>
 <a class="sourceLine" id="cb6-5" title="5">      <span class="kw"><a href="../reference/dr_sidebarItem.html">dr_sidebarItem</a></span>(<span class="dt">id =</span> <span class="st">"un"</span>,<span class="st">"Am"</span>),</a>
 <a class="sourceLine" id="cb6-6" title="6">      <span class="kw"><a href="../reference/dr_sidebarItem.html">dr_sidebarItem</a></span>(<span class="dt">id =</span> <span class="st">"deux"</span>,<span class="st">"Stram"</span>),</a>
 <a class="sourceLine" id="cb6-7" title="7">      <span class="kw"><a href="../reference/dr_sidebarItem.html">dr_sidebarItem</a></span>(<span class="dt">id =</span> <span class="st">"trois"</span>,<span class="st">"Gram"</span>)</a>
 <a class="sourceLine" id="cb6-8" title="8">    ), </a>
-<a class="sourceLine" id="cb6-9" title="9">    <span class="dt">body =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/tag">tagList</a></span>(</a>
+<a class="sourceLine" id="cb6-9" title="9">    <span class="dt">body =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/tag">tagList</a></span>(</a>
 <a class="sourceLine" id="cb6-10" title="10">      <span class="kw"><a href="../reference/bodyelements.html">dr_panel</a></span>(</a>
 <a class="sourceLine" id="cb6-11" title="11">        <span class="dt">id =</span> <span class="st">"un"</span>,</a>
-<a class="sourceLine" id="cb6-12" title="12">        <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/builder">h3</a></span>(<span class="st">"DREAL"</span>),</a>
-<a class="sourceLine" id="cb6-13" title="13">       <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot1"</span>)</a>
+<a class="sourceLine" id="cb6-12" title="12">        <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/builder">h3</a></span>(<span class="st">"DREAL"</span>),</a>
+<a class="sourceLine" id="cb6-13" title="13">       <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot1"</span>)</a>
 <a class="sourceLine" id="cb6-14" title="14">      ),</a>
 <a class="sourceLine" id="cb6-15" title="15">      <span class="kw"><a href="../reference/bodyelements.html">dr_panel</a></span>(</a>
 <a class="sourceLine" id="cb6-16" title="16">        <span class="dt">id =</span> <span class="st">"deux"</span>,</a>
-<a class="sourceLine" id="cb6-17" title="17">        <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot2"</span>)</a>
+<a class="sourceLine" id="cb6-17" title="17">        <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot2"</span>)</a>
 <a class="sourceLine" id="cb6-18" title="18">      ),</a>
 <a class="sourceLine" id="cb6-19" title="19">      <span class="kw"><a href="../reference/bodyelements.html">dr_panel</a></span>(</a>
 <a class="sourceLine" id="cb6-20" title="20">        <span class="dt">id =</span> <span class="st">"trois"</span>,</a>
-<a class="sourceLine" id="cb6-21" title="21">        <span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot3"</span>)</a>
+<a class="sourceLine" id="cb6-21" title="21">        <span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/plotOutput">plotOutput</a></span>(<span class="st">"plot3"</span>)</a>
 <a class="sourceLine" id="cb6-22" title="22">      )</a>
 <a class="sourceLine" id="cb6-23" title="23">    )</a>
 <a class="sourceLine" id="cb6-24" title="24">  )</a>
 <a class="sourceLine" id="cb6-25" title="25">}</a>
 <a class="sourceLine" id="cb6-26" title="26"></a>
 <a class="sourceLine" id="cb6-27" title="27">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session){</a>
-<a class="sourceLine" id="cb6-28" title="28">  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb6-29" title="29">    <span class="kw">plot</span>(iris)</a>
+<a class="sourceLine" id="cb6-28" title="28">  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb6-29" title="29">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(iris)</a>
 <a class="sourceLine" id="cb6-30" title="30">  })</a>
-<a class="sourceLine" id="cb6-31" title="31">  output<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb6-32" title="32">    <span class="kw">plot</span>(airquality)</a>
+<a class="sourceLine" id="cb6-31" title="31">  output<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb6-32" title="32">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(airquality)</a>
 <a class="sourceLine" id="cb6-33" title="33">  })</a>
-<a class="sourceLine" id="cb6-34" title="34">  output<span class="op">$</span>plot3 &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
-<a class="sourceLine" id="cb6-35" title="35">    <span class="kw">plot</span>(mtcars)</a>
+<a class="sourceLine" id="cb6-34" title="34">  output<span class="op">$</span>plot3 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/renderPlot">renderPlot</a></span>({</a>
+<a class="sourceLine" id="cb6-35" title="35">    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(mtcars)</a>
 <a class="sourceLine" id="cb6-36" title="36">  })</a>
 <a class="sourceLine" id="cb6-37" title="37">}</a>
 <a class="sourceLine" id="cb6-38" title="38"></a>
-<a class="sourceLine" id="cb6-39" title="39"><span class="kw"><a href="http://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a></code></pre></div>
+<a class="sourceLine" id="cb6-39" title="39"><span class="kw"><a href="https://www.rdocumentation.org/packages/shiny/topics/shinyApp">shinyApp</a></span>(ui, server)</a></code></pre></div>
 </div>
 </div>
   </div>

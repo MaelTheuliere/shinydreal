@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 Package de template Shiny DREAL. 
 
-Pour lire les tutos, rendez-vous dans le menu "Artibles" de cette page.
+Pour lire les tutos, rendez-vous dans le menu "Articles" de cette page.
 
 Pour lire la documentation des fonctions, rendez-vous dans le menu "Reference" de cette page.
 
