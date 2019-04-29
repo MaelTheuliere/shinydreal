@@ -1,5 +1,5 @@
 expect_shinytag <- function(object) {
-  act <- testthat::quasi_label(rlang::enquo(object), arg = "object")
+  act <- testthat::quasi_label(rlang::enquo(object), "object")
   act$class <- class(object)[1]
   expect(
     act$class == "shiny.tag",
@@ -8,7 +8,7 @@ expect_shinytag <- function(object) {
   invisible(act$val)
 }
 expect_shinytaglist <- function(object) {
-  act <- testthat::quasi_label(rlang::enquo(object), arg = "object")
+  act <- testthat::quasi_label(rlang::enquo(object), "object")
   act$class <- class(object)[1]
   expect(
     act$class == "shiny.tag.list",
@@ -18,7 +18,7 @@ expect_shinytaglist <- function(object) {
 }
 
 expect_grep <- function(object, pattern) {
-  act <- testthat::quasi_label(rlang::enquo(object), arg = "object")
+  act <- testthat::quasi_label(rlang::enquo(object), "object")
   expect(
     grepl(pattern, object),
     sprintf("%s not greped in %s.", pattern, act$lab)
