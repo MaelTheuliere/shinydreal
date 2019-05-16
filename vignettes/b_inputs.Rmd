@@ -92,7 +92,7 @@ dr_fluidPage(
 )
 ```
 
-### dr_icons
+### dr_icon
 
 Librairie d'icônes.
 
@@ -102,9 +102,9 @@ Librairie d'icônes.
 ```{r}
 dr_fluidPage(
   tagList(
-    dr_icons("la-jsfiddle"),
-    dr_icons("drl-explosion", size = 2),
-    dr_icons("drl-cadastre", size = 7, color = 'red')
+    dr_icon("la-jsfiddle"),
+    dr_icon("drl-explosion", size = 2),
+    dr_icon("drl-cadastre", size = 7, color = 'red')
   )
 )
 ```

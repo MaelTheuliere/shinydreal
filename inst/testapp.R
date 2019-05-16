@@ -39,15 +39,15 @@ ui <- function(request){
     ), 
     dr_panel(
       id = "un",
-      dr_icons("la-wheelchair", size = 12)
+      dr_icon("la-wheelchair", size = 12)
     ),
     dr_panel(
       id = "deux",
-      dr_icons("la-wordpress", size = 12)
+      dr_icon("la-wordpress", size = 12)
     ),
     dr_panel(
       id = "trois",
-      dr_icons("la-youtube", size = 12)
+      dr_icon("la-youtube", size = 12)
     )
     
   )

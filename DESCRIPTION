@@ -19,6 +19,7 @@ Imports:
 Suggests: 
     knitr,
     pkgdown,
+    rlang,
     rmarkdown,
     testthat (>= 2.1.0)
 VignetteBuilder: 
