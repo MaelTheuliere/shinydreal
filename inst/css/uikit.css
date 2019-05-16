@@ -1,4 +1,4 @@
-/* 100% width in shiny 
+/* Full width in Shiny
 body {
     max-width: 1024px;
     margin: 0 auto;
@@ -14,6 +14,12 @@ pre {
   color: white; /* Added by SEB */
   padding: 5px 10px;
   /*line-height: 1.5em;*/
+}
+pre:not([class]) {
+    background-color: #292b2c; /* Added by SEB */
+}
+.caption {
+    font-size: 16px; /* Added by SEB */
 }
 
 html, body {

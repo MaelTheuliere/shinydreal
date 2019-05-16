@@ -12,8 +12,10 @@ Depends:
     R (>= 2.10)
 Imports: 
     attempt,
+    flexdashboard,
     glue,
     htmltools,
+    rmarkdown,
     shiny,
     utils
 Suggests: 
@@ -22,7 +24,6 @@ Suggests:
     knitr,
     pkgdown,
     rlang,
-    rmarkdown,
     shinipsum,
     shinydashboard,
     testthat (>= 2.1.0)

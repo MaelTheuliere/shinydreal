@@ -21,6 +21,8 @@ library(shinydreal)
 #> 
 #> Pour lancer l'aide
 #> tapez : `dr_help()`
+#> Pour voir une app de demo
+#> utiliser : `app_dashboard(browse = FALSE)`
 #> 
 ```
 
@@ -37,4 +39,11 @@ en paramètre de la fonction.
 
 ``` r
 dr_examples("01_fluidpage.R")
+```
+
+## Example de flexdashboard
+
+``` r
+flex <- system.file("flexdashboard", package = "shinydreal")
+browseURL(flex)
 ```

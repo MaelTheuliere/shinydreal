@@ -40,3 +40,11 @@ Ensuite, chaque example peut être relancé en utilisant le nom de l'app en para
 ```{r eval = FALSE}
 dr_examples("01_fluidpage.R")
 ```
+
+## Example de flexdashboard
+
+```{r, eval=FALSE}
+flex <- system.file("flexdashboard", package = "shinydreal")
+browseURL(flex)
+```
+
