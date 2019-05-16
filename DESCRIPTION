@@ -17,13 +17,20 @@ Imports:
     shiny,
     utils
 Suggests: 
+    dplyr,
+    emo,
     knitr,
     pkgdown,
     rlang,
     rmarkdown,
+    shinipsum,
+    shinydashboard,
     testthat (>= 2.1.0)
 VignetteBuilder: 
     knitr
+Remotes:
+    hadley/emo,
+    ThinkR-open/shinipsum
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

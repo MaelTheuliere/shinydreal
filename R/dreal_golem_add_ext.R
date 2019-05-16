@@ -5,10 +5,10 @@
 #' @export
 app_dashboard <- function(browse = FALSE) {
   dash <- system.file("shinydashboard", package = "shinydreal")
-  source(dash)
   if (isTRUE(browse)) {
     utils::browseURL(dash)
   } else {
+    source(file.path(dash, "app.R"))
     shiny::shinyApp(ui(), server)
   }
 }

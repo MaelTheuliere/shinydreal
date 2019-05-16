@@ -12,17 +12,18 @@ lapply(list.files("inst/shinydashboard/R", full.names = TRUE), source)
 sidebar <- dashboardSidebar(
   sidebarSearchForm(label = "Search...", "searchText", "searchButton"),
   sidebarMenu(
-    menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-    menuItem("Exemples 1", icon = icon("th"), tabName = "exemple1", badgeLabel = "new",
-             badgeColor = "green"
+    menuItem("Comparaison", tabName = "resume", icon = icon("dashboard"),
+             badgeLabel = "ok", badgeColor = "red"),
+    menuItem("ShinyDashboard", tabName = "dashboard", icon = icon("dashboard")),
+    menuItem("Shinydreal 1", icon = icon("th"), tabName = "exemple1", 
+             badgeLabel = "new", badgeColor = "green"
     ),
-    menuItem("Exemples 2", tabName = "exemple2", icon = icon("dashboard")),
-    menuItem("Charts", icon = icon("bar-chart-o"),
-             menuSubItem("Chart sub-item 1", tabName = "subitem1"),
-             menuSubItem("Chart sub-item 2", tabName = "subitem2")
-    ),
-    menuItem("Source code for app", icon = icon("file-code-o"),
-             href = "https://github.com/rstudio/shinydashboard/blob/gh-pages/_apps/sidebar/app.R"
+    menuItem("Shinydreal 2", tabName = "exemple2", icon = icon("dashboard"),
+             badgeLabel = "new", badgeColor = "yellow"),
+    # menuItem("Résumé", tabName = "resume", icon = icon("dashboard")),
+    menuItem("Sous-menu ex.", icon = icon("bar-chart-o"),
+             menuSubItem("Sub-item 1", tabName = "subitem1"),
+             menuSubItem("Sub-item 2", tabName = "subitem2")
     )
   )
 )
@@ -190,6 +191,24 @@ body <- dashboardBody(
                 mod_panel_5_ui("panel_5_ui_1")
               )
             )
+    ),
+    # tabitem comparaison ----
+    # tabItem("comparaison",
+    #         fluidRow(
+    #           column(
+    #             width = 12,
+    #             mod_panel_comp_ui("panel_comp_ui_1")
+    #           )
+    #         )
+    # ),
+    # tabitem resume ----
+    tabItem("resume",
+            fluidRow(
+              column(
+                width = 12,
+                mod_panel_resume_ui("panel_resume_ui_1")
+              )
+            )
     )
   )
 )
@@ -348,6 +367,8 @@ server <- function(input, output) {
   callModule(mod_panel_4_server, "panel_4_ui_1")
   
   callModule(mod_panel_5_server, "panel_5_ui_1")
+  
+  callModule(mod_panel_comp_server, "panel_comp_ui_1")
   
   callModule(mod_panel_resume_server, "panel_resume_ui_1")
 }
