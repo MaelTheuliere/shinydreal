@@ -1,6 +1,8 @@
 file.create("LICENCE")
 write("COPYRIGHT DREAL - 2019", "LICENCE")
 
+usethis::use_build_ignore("app.R")
+
 usethis::use_test()
 
 usethis::use_vignette("a_getting_started")
@@ -8,7 +10,8 @@ usethis::use_vignette("b_inputs")
 
 
 # Documentation
-attachment::att_to_description(extra.suggests = "pkgdown")
+attachment::att_to_description(extra.suggests = c(
+  "pkgdown", "emo", "shinipsum", "shinydashboard", "dplyr"))
 
 # Le pkgdown
 visualidentity::build_pkgdown(
@@ -44,3 +47,5 @@ setwd(origwd)
 # Install from gitlab
 thinkridentity::open_install_git_with_pwd()
 
+# Docker run
+# docker run -d -e PASSWORD=coucou -p 8787:8787 rocker/verse

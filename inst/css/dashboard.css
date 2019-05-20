@@ -1,0 +1,215 @@
+:root {
+    --blue: #008ca0; /* primary */
+    /*--indigo: #6610f2; */
+    --purple: #5a1e82; /* secondary*/
+    /*--pink: #e83e8c;*/
+    --red: #eb3273; /* danger */
+    /*--orange: #fd7e14;*/
+    --yellow: #ffd200; /*warning*/
+    --green: #b4dc50; /* success */
+    /*--teal: #20c997; */
+    /*--cyan: #17a2b8; */
+    --white: #ffffff; 
+    --gray: #b4b4b4; /* info*/
+    --gray-light: #d2d2d2; /* info-light*/
+    --gray-dark: #343a40;
+    --primary: #008ca0; /*dreal*/
+    --primary-active: #00465a; /*dreal*/
+    --secondary: #5a1e82; /*dreal*/
+    --success: #b4dc50; /*dreal*/
+    --info: #b4b4b4; /*dreal*/
+    --info-light: #d2d2d2; /*dreal*/
+    --warning: #ffd200;/*dreal*/
+    --danger: #eb3273; /*dreal*/
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+
+/* ShinyDashboard*/
+body {
+    line-height: 1;
+}
+/* navbar */
+.main-header {
+    background-color: var(--primary-active);
+    max-height: 50px;
+}
+.skin-blue .main-header .navbar {
+    background-color: var(--primary-active);
+}
+
+/*sidebar*/
+.skin-blue .left-side, .skin-blue .main-sidebar, .skin-blue .wrapper {
+    background-color: var(--primary);
+}
+.skin-blue .main-header .logo {
+    background-color: var(--primary-active);
+    color: var(--white);
+}
+.skin-blue .main-header .logo:hover {
+    background-color: var(--primary-active);
+    color: var(--secondary);
+}
+.skin-blue .sidebar-menu > li.active > a, .skin-blue .sidebar-menu > li:hover > a {
+    color: #fff;
+    background: var(--primary-active);
+    border-left-color: var(--secondary);
+}
+.skin-blue .sidebar a {
+    color: var(--gray-light);
+}
+
+/* box */
+.box.box-primary {
+    border-top-color: var(--primary);
+}
+.box.box-warning {
+    border-top-color: var(--warning);
+}
+.box.box-danger {
+    border-top-color: var(--danger);
+}
+.box.box-success {
+    border-top-color: var(--success);
+}
+.box.box-solid.box-primary {
+    border: 1px solid var(--primary);
+}
+.box.box-solid.box-warning {
+    border: 1px solid var(--warning);
+}
+.box.box-solid.box-danger {
+    border: 1px solid var(--danger);
+}
+.box.box-solid.box-success {
+    border: 1px solid var(--success);
+}
+.box.box-solid > .box-header h3 {
+    color: #fff;
+}
+.box.box-solid.box-primary > .box-header {
+    color: #fff;
+    background: var(--primary);
+    background-color: var(--primary);
+}
+.box.box-solid.box-warning > .box-header {
+    color: #fff;
+    background: var(--warning);
+    background-color: var(--warning);
+}
+.box.box-solid.box-danger > .box-header {
+    color: #fff;
+    background: var(--danger);
+    background-color: var(--danger);
+}
+.box.box-solid.box-success > .box-header {
+    color: #fff;
+    background: var(--success);
+    background-color: var(--success);
+}
+.alert-primary, .bg-blue, .label-primary,
+.callout.callout-primary, .modal-primary .modal-body {
+    background-color: var(--primary) !important;
+}
+.alert-warning, .bg-yellow, .label-warning,
+.callout.callout-warning, .modal-warning .modal-body {
+    background-color: var(--warning) !important;
+}
+.alert-danger, .bg-red, .label-danger,
+.callout.callout-danger, .modal-danger .modal-body {
+    background-color: var(--danger) !important;
+}
+.alert-success, .bg-green, .label-sucess, 
+.callout.callout-success, .modal-success .modal-body {
+    background-color: var(--success) !important;
+}
+.bg-purple {
+    background-color: var(--secondary) !important;
+}
+.box-primary .box-title,
+.box-warning .box-title, 
+.box-danger .box-title,
+.box-success .box-title{
+    color: white;
+}
+
+/* nav-tabs*/
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color: var(--primary);
+}
+
+/* widget */
+.control-label, 
+.form-group > label {
+    color: var(--primary);
+}
+
+/* Selectors */
+.irs-single,
+.irs-bar-edge,
+.irs-bar {
+  background: var(--primary)!important;
+  border-top: 1px solid var(--primary)!important;
+  border-bottom: 1px solid var(--primary)!important;
+  color: var(--white);
+}
+.irs-from,
+.irs-to {
+  background: var(--primary)!important;
+}
+.irs-min,
+.irs-max {
+  background: var(--info);
+}
+
+.filter-option {
+  background: var(--primary)!important;
+  color: white;
+}
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+    color: var(--primary);
+}
+.dropdown-menu a {
+    color: var(--primary);
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--primary);
+}
+.dropdown-menu .selected.active {
+    background-color: var(--primary);
+}
+.bootstrap-switch-handle-on.bootstrap-switch-primary {
+    color: var(--white);
+    background: var(--primary-active);
+}
+.input-group .form-control::placeholder {
+    color: var(--white);
+}
+.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary-active);
+}
+.form-control:active, .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(0, 140, 160, 0.3);
+}
+/*
+.form-group .form-control {
+    padding: 6px 12px;
+}
+*/
