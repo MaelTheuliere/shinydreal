@@ -1,13 +1,14 @@
 library(shinydashboard)
 library(shiny)
 library(shinydreal)
+library(shinipsum)
 
 skin <- Sys.getenv("DASHBOARD_SKIN")
 skin <- tolower(skin)
 if (skin == "")
   skin <- "blue"
 
-lapply(list.files("inst/shinydashboard/R", full.names = TRUE), source)
+lapply(list.files("R", full.names = TRUE), source)
 
 sidebar <- dashboardSidebar(
   sidebarSearchForm(label = "Search...", "searchText", "searchButton"),
