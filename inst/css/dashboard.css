@@ -66,6 +66,9 @@ body {
 .skin-blue .sidebar a {
     color: var(--gray-light);
 }
+aside a, a.sidebar-toggle {
+    text-decoration: none;
+}
 
 /* box */
 .box.box-primary {
