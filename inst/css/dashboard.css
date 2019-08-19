@@ -146,9 +146,33 @@ aside a, a.sidebar-toggle {
 }
 
 /* nav-tabs*/
-.nav-tabs-custom > .nav-tabs > li.active {
-    border-top-color: var(--primary);
+.nav-tabs {
+    background-color: var(--primary-light);
+    color: var(--white);
+    font-weight: bold;
 }
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color: var(--primary-active);
+    background-color: var(--primary-active);
+}
+.nav-tabs-custom > .nav-tabs > li.active a {
+    background-color: var(--primary-active);
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+  color: var(--primary-active);
+}
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li.active a {
+  color: var(--white);
+  text-decoration: none;
+}
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+    color: var(--primary-active);
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+}
+
 
 /* widget */
 .control-label, 

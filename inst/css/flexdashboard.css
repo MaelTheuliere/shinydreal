@@ -21,20 +21,25 @@
   color: #00bebe;
 }
 
+/* nav-tabs */
 .nav-tabs-custom > .nav-tabs > li > a,
 .nav-tabs-custom > .nav-tabs > li:hover > a {
   font-size: 0.916rem;
   font-weight: 300;
-  color: #8246aa;
-  text-transform: uppercase;
+  /*color: #8246aa;*/
+  /*text-transform: uppercase; */
 }
 
 .nav-tabs-custom > .nav-tabs > li.active > a,
 .nav-tabs-custom > .nav-tabs > li.active:hover > a {
   font-size: 0.916rem;
   font-weight: 600;
-  color: #8246aa;
-  text-transform: uppercase;
+  /*color: #8246aa;*/
+  /*text-transform: uppercase;*/
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-bottom: solid 3px var(--primary-active);
 }
 
 /*
