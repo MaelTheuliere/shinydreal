@@ -165,6 +165,8 @@ body <- dashboardBody(
           textAreaInput("captiondb", "textAreaInput", "Data Summary", width = "200px"),
           textInput("caption2db", "textInput", "Data Summary"),
           varSelectInput("variabledb", "varSelectInput", mtcars),
+          selectInput("n_breaks", label = "selectInput with multiple vars",
+                      choices = c(10, 20, 35, 50, 100), selected = 20, multiple = TRUE),
           sliderInput("obsdb", "sliderInput",
                       min = 0, max = 1000, value = 500
           )

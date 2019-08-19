@@ -15,6 +15,7 @@
     --gray-dark: #343a40;
     --primary: #008ca0; /*dreal*/
     --primary-active: #00465a; /*dreal*/
+    --primary-light: #00bebe; /*dreal*/
     --secondary: #5a1e82; /*dreal*/
     --success: #b4dc50; /*dreal*/
     --info: #b4b4b4; /*dreal*/
@@ -216,3 +217,25 @@ aside a, a.sidebar-toggle {
     padding: 6px 12px;
 }
 */
+.selectize-control {
+    color: var(--white);
+}
+.selectize-input{
+    background: var(--primary-active) !important;
+    color: var(--white);
+    border: 1px solid var(--primary-active) !important;
+    font-weight: bold;
+}
+.selectize-input::after {
+  border-color: var(--white) transparent transparent transparent !important;
+}
+.selectize-dropdown {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-color: var(--primary-light);
+}
+.selectize-dropdown .active {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--primary);
+}
