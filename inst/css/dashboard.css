@@ -70,6 +70,9 @@ body {
 aside a, a.sidebar-toggle {
     text-decoration: none;
 }
+.sidebar-menu li > a {
+    font-size: 16px;
+}
 
 /* box */
 .box.box-primary {
@@ -262,4 +265,11 @@ aside a, a.sidebar-toggle {
     color: var(--white);
     text-decoration: none;
     background-color: var(--primary);
+}
+
+.input-daterange .input-sm.form-control {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 13px;
 }

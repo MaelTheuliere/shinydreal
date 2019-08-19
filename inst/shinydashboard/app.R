@@ -12,7 +12,7 @@ lapply(list.files("inst/shinydashboard/R", full.names = TRUE), source)
 sidebar <- dashboardSidebar(
   sidebarSearchForm(label = "Search...", "searchText", "searchButton"),
   sidebarMenu(
-    menuItem("Comparaison", tabName = "resume", icon = icon("dashboard"),
+    menuItem("Comparaison (avec long titre)", tabName = "resume", icon = icon("dashboard"),
              badgeLabel = "ok", badgeColor = "red"),
     menuItem("ShinyDashboard", tabName = "dashboard", icon = icon("dashboard")),
     menuItem("Shinydreal 1", icon = icon("th"), tabName = "exemple1", 
@@ -24,7 +24,10 @@ sidebar <- dashboardSidebar(
     menuItem("Sous-menu ex.", icon = icon("bar-chart-o"),
              menuSubItem("Sub-item 1", tabName = "subitem1"),
              menuSubItem("Sub-item 2", tabName = "subitem2")
-    )
+    ),
+    dateRangeInput("daterangeleft", "dateRangeInput",
+                   start = "2001-01-01",
+                   end   = "2010-12-31")
   )
 )
 
