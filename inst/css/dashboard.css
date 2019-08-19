@@ -15,6 +15,7 @@
     --gray-dark: #343a40;
     --primary: #008ca0; /*dreal*/
     --primary-active: #00465a; /*dreal*/
+    --primary-light: #00bebe; /*dreal*/
     --secondary: #5a1e82; /*dreal*/
     --success: #b4dc50; /*dreal*/
     --info: #b4b4b4; /*dreal*/
@@ -65,6 +66,12 @@ body {
 }
 .skin-blue .sidebar a {
     color: var(--gray-light);
+}
+aside a, a.sidebar-toggle {
+    text-decoration: none;
+}
+.sidebar-menu li > a {
+    font-size: 16px;
 }
 
 /* box */
@@ -142,9 +149,33 @@ body {
 }
 
 /* nav-tabs*/
-.nav-tabs-custom > .nav-tabs > li.active {
-    border-top-color: var(--primary);
+.nav-tabs {
+    background-color: var(--primary-light);
+    color: var(--white);
+    font-weight: bold;
 }
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color: var(--primary-active);
+    background-color: var(--primary-active);
+}
+.nav-tabs-custom > .nav-tabs > li.active a {
+    background-color: var(--primary-active);
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+  color: var(--primary-active);
+}
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li.active a {
+  color: var(--white);
+  text-decoration: none;
+}
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+    color: var(--primary-active);
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+}
+
 
 /* widget */
 .control-label, 
@@ -213,3 +244,32 @@ body {
     padding: 6px 12px;
 }
 */
+.selectize-control {
+    color: var(--white);
+}
+.selectize-input{
+    background: var(--primary-active) !important;
+    color: var(--white);
+    border: 1px solid var(--primary-active) !important;
+    font-weight: bold;
+}
+.selectize-input::after {
+  border-color: var(--white) transparent transparent transparent !important;
+}
+.selectize-dropdown {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-color: var(--primary-light);
+}
+.selectize-dropdown .active {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--primary);
+}
+
+.input-daterange .input-sm.form-control {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 13px;
+}
