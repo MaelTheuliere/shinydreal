@@ -9,9 +9,9 @@ golem_add_external_resources <- function(){
   tagList(
     # Add here all the external resources
     # If you have a custom.css in the inst/app/www
-    tags$link(rel="stylesheet", type="text/css", href="css/uikit.css"),
+    tags$link(rel="stylesheet", type="text/css", href="css/uikit_Lato_Roboto.css"),
     tags$link(rel="stylesheet", type="text/css", href="css/dashboard.css"),
-    tags$link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto+Slab:300,400,700"),
+    tags$link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto+Slab:300,400,700|Lato:300,400,700|Roboto:300,400,700"),
     tags$script(src = "resources/drealjs/main.js")
   )
 }

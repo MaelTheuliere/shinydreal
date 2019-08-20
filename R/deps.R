@@ -9,7 +9,7 @@ dreal_dependency <- function() {
       "vendors/jquery-ui/css/jquery-ui.min.css",
       "fonts/lineawesome/css/line-awesome.min.css",
       "fonts/dreal/css/dreal.css",
-      "css/uikit.css",
+      "css/uikit_Lato_Roboto.css",
       "css/custom.css"
     ),
     meta = list(
@@ -18,7 +18,7 @@ dreal_dependency <- function() {
     head = HTML(
       '<meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto+Slab:300,400,700" rel="stylesheet"> '
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto+Slab:300,400,700|Lato:300,400,700|Roboto:300,400,700" rel="stylesheet"> '
     )
   )
 }
