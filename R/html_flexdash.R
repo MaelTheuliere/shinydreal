@@ -9,7 +9,7 @@ html_flexdash <- function(..., offline = FALSE) {
   
   # get the locations of resource files located within the package
   css <- c(
-    system.file("css/uikit.css", package = "shinydreal"),
+    system.file("css/uikit_Lato_Roboto.css", package = "shinydreal"),
     system.file("css/dashboard.css", package = "shinydreal"),
     system.file("css/flexdashboard.css", package = "shinydreal")
   )
