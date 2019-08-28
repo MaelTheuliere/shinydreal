@@ -244,8 +244,12 @@ aside a, a.sidebar-toggle {
     padding: 6px 12px;
 }
 */
-.selectize-control {
+.selectize-control,
+.selectize-control.form-control {
     color: var(--white);
+}
+.selectize-control.form-control {
+  background-color: transparent;
 }
 .selectize-input{
     background: var(--primary-active) !important;
@@ -256,7 +260,8 @@ aside a, a.sidebar-toggle {
 .selectize-input::after {
   border-color: var(--white) transparent transparent transparent !important;
 }
-.selectize-dropdown {
+.selectize-dropdown,
+.selectize-dropdown.form-control {
     background-color: var(--primary-light);
     color: var(--white);
     border-color: var(--primary-light);

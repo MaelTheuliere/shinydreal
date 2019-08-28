@@ -2,6 +2,7 @@ library(shinydashboard)
 library(shiny)
 library(shinydreal)
 library(shinipsum)
+library(htmltools)
 
 skin <- Sys.getenv("DASHBOARD_SKIN")
 skin <- tolower(skin)
@@ -171,6 +172,8 @@ body <- dashboardBody(
           varSelectInput("variabledb", "varSelectInput", mtcars),
           selectInput("n_breaks", label = "selectInput with multiple vars",
                       choices = c(10, 20, 35, 50, 100), selected = 20, multiple = TRUE),
+          # selectizeInput("selectize", label = "selectizeInput with multiple vars",
+                      # choices = c(10, 20, 35, 50, 100), selected = 20, multiple = TRUE),
           sliderInput("obsdb", "sliderInput",
                       min = 0, max = 1000, value = 500
           )
