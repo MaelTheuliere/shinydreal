@@ -4,10 +4,12 @@
 \alias{html_flexdash}
 \title{R Markdown Format for Flexible Dashboards with dreal template}
 \usage{
-html_flexdash(..., offline = FALSE)
+html_flexdash(..., css_dir = "libs", offline = FALSE)
 }
 \arguments{
 \item{...}{parameters of \code{\link[flexdashboard]{flex_dashboard}}}
+
+\item{css_dir}{directory relative to Rmd where css is saved}
 
 \item{offline}{Logical.}
 }

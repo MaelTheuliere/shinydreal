@@ -1,0 +1,60 @@
+/* navbar */
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0rem;
+}
+.navbar-inverse {
+    background-color: var(--primary);
+    border-color: var(--primary-active);
+}
+.navbar-inverse .navbar-brand {
+    color: var(--white);
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: var(--white);
+}
+
+/* Chart */
+.chart-title {
+  font-size: 1.3335rem;
+  color: #00bebe;
+}
+
+/* nav-tabs */
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li:hover > a {
+  font-size: 0.916rem;
+  font-weight: 300;
+  /*color: #8246aa;*/
+  /*text-transform: uppercase; */
+}
+
+.nav-tabs-custom > .nav-tabs > li.active > a,
+.nav-tabs-custom > .nav-tabs > li.active:hover > a {
+  font-size: 0.916rem;
+  font-weight: 600;
+  /*color: #8246aa;*/
+  /*text-transform: uppercase;*/
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-bottom: solid 3px var(--primary-active);
+}
+
+/*
+h4 {
+  font-size: 1.327rem;
+  font-weight: 600;
+  color: #8246aa;
+  position: relative;
+  display: inline-block; }
+  h4:before {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: #00bebe;
+    position: absolute;
+    bottom: -6px;
+    left: 0; }
+*/
