@@ -3,13 +3,13 @@ Title: Template Shiny DREAL
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Colin",
-           family = "Fay",
-           role = c("aut", "cre"),
-           email = "colin@thinkr.fr"),
-       person(given = "Sébastien",
-           family = "Rochette",
-           role = c("aut"),
-           email = "sebastien@thinkr.fr"))
+             family = "Fay",
+             role = c("aut", "cre"),
+             email = "colin@thinkr.fr"),
+      person(given = "Sébastien",
+             family = "Rochette",
+             role = "aut",
+             email = "sebastien@thinkr.fr"))
 Description: Template Shiny pour la DREAL.
 License: file LICENCE
 Depends: 

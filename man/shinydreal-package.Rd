@@ -11,5 +11,10 @@ Template Shiny pour la DREAL.
 \author{
 \strong{Maintainer}: Colin Fay \email{colin@thinkr.fr}
 
+Authors:
+\itemize{
+  \item Sébastien Rochette \email{sebastien@thinkr.fr}
+}
+
 }
 \keyword{internal}
