@@ -12,6 +12,7 @@ Authors@R:
              email = "sebastien@thinkr.fr"))
 Description: Template Shiny pour la DREAL.
 License: file LICENCE
+URL: https://gitlab.com/dreal-datalab/shinydreal
 Depends: 
     R (>= 2.10)
 Imports: 
