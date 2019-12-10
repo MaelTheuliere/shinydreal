@@ -10,6 +10,14 @@ Pour lire les tutos, rendez-vous dans le menu “Articles” de cette page.
 Pour lire la documentation des fonctions, rendez-vous dans le menu
 “Reference” de cette page.
 
+# Installation
+
+Installation à partir de gitlab :
+
+``` r
+remotes::install_gitlab("dreal-datalab/shinydreal")
+```
+
 ## Avant de commencer
 
 Étant un template `{shiny}`, `{shinydreal}` fonctionne en combinaison
